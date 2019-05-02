@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Amorepacific Beautypoint</title>
+    <link rel="stylesheet" type="text/css" href="/pb/renew2/resource/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="/pb/renew2/resource/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/pb/renew2/resource/css/survey.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Contents Main -->
+        <div class="contents_main">
+            <div class="img_box main_visual">
+                <h1 class="main_visual_tit ui-split-text" data-animation="on">매일매일 설문하면 혜택이 펑펑!<strong>뷰포설문</strong></h1>
+                <a href="#" class="main_visual_btn">공유하기</a>
+            </div>
+
+            <div class="sv_inner">
+                <div class="sv_main_btn">
+                    <a href="#" class="sv_button gr_blue">시작하기</a>
+                    <ul>
+                        <li><a href="#" class="ic_info">이용가이드</a></li>
+                        <li><a href="#" class="ic_ranking">랭킹</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 롤링배너 -->
+            <div class="contents_banner sv_main_banner">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/pb/renew2/resource/images/survey/@main_banner1.jpg" alt="롤링 이미지"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/pb/renew2/resource/images/survey/@main_banner1.jpg" alt="롤링 이미지"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="/pb/renew2/resource/images/survey/@main_banner1.jpg" alt="롤링 이미지"></a>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper_bar">
+                    <div class="base"></div>
+                </div>
+            </div>
+            <!-- //롤링배너 -->
+        </div>
+        <!-- //Contents Main -->
+
+        <!-- Alert Popup -->
+        <!-- <div class="alert_popup open">
+            <div class="pop_conts">
+                <div class="message">
+                    <p>로그인 후 이용 가능한 서비스입니다.<br>
+                    로그인 하시겠습니까?</p>
+                </div>
+                <div class="btn_wrap">
+                    <a href="#1" class="btn_no">아니요</a>
+                    <a href="#1" class="btn_yes">예</a>
+                </div>
+            </div>
+        </div> -->
+        <!-- //Alert Popup -->
+    </div>
+    <!-- JS -->
+    <script src="/pb/renew2/resource/js/jquery-1.9.1.min.js"></script>
+    <script src="/pb/renew2/resource/js/swiper.min.js"></script>
+    <script src="/pb/renew2/resource/js/default.js"></script>
+    <script src="/pb/renew2/resource/js/ui-survey.js"></script>
+    <script>
+        var swiper = new Swiper('.sv_main_banner', {
+            //loop: true,
+            autoplay: {
+                delay: 4000,
+            },
+            scrollbar: {
+                el: '.swiper_bar .base'
+            },
+        });
+    </script>
+</body>
+</html>

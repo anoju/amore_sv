@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>Amorepacific Beautypoint</title>
+	<link rel="stylesheet" type="text/css" href="/html/resource/css/front.css">
+</head>
+
+<body>
+	<!-- Contents -->
+	<div class="sv_survey_wrap">
+		<div class="sv_inner">
+			<div class="sv_today_score">
+				<dl class="info">
+					<dt>오늘의 설문</dt>
+					<dd>10/20개</dd>
+				</dl>
+				<div class="sv_graph">
+					<div class="line">
+						<div class="bar" style="width:50%;"></div>
+						<div class="mark"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="sv_hr">
+		<div class="sv_inner">
+			<dl class="sv_survey">
+				<dt>당신에게 가장 잘 어울리는 컬러톤은 무엇인가요? <sub>(2개 이상 선택 필수)</sub></dt>
+				<dd>
+					<div class="blind ui-numbering-inp">
+						1순위) <input type="text" name="rank"><br>
+						2순위) <input type="text" name="rank"><br>
+						3순위) <input type="text" name="rank"><br>
+						4순위) <input type="text" name="rank"><br>
+					</div>
+					<div class="sv_check_item_wrap ui-check-numbering">
+						<label class="sv_check_item">
+							<input type="checkbox" name="checkbox" id="">
+							<div class="lbl">
+								<div>원색</div>
+							</div>
+						</label>
+						<label class="sv_check_item">
+							<input type="checkbox" name="checkbox" id="">
+							<div class="lbl">
+								<div>파스텔톤</div>
+							</div>
+						</label>
+						<label class="sv_check_item">
+							<input type="checkbox" name="checkbox" id="">
+							<div class="lbl">
+								<div>무채색</div>
+							</div>
+						</label>
+						<label class="sv_check_item">
+							<input type="checkbox" name="checkbox" id="">
+							<div class="lbl">
+								<div>기타</div>
+							</div>
+						</label>
+					</div>
+				</dd>
+			</dl>
+		</div>
+		<div class="btn_wrap fixed">
+			<span><a href="#" class="sv_button blue">다음</a></span>
+		</div>
+	</div>
+	<!-- //Contents -->
+
+	<!-- JS -->
+	<script src="/html/resource/js/jquery-1.9.1.min.js"></script>
+	<script>
+	/* 체크박스 체크시 넘버링*/
+	var $checkbox = $('.ui-check-numbering input[type=checkbox]');
+	$checkbox.change(function(){
+		if($(this).prop('checked')){
+			var $length = $checkbox.filter(":checked").length,
+				$txt = $(this).siblings('.lbl').children('div').text();
+			$(this).siblings('.lbl').append('<span class="num">'+$length+'</span>');
+			$('.ui-numbering-inp').find('input').eq($length-1).val($txt);
+		}else{
+			var $num = $(this).siblings('.lbl').find('.num'),
+				$numTxt = $num.text();
+			$checkbox.each(function(){
+				var $num2 = $(this).siblings('.lbl').find('.num'),
+					$numTxt2 = $num2.text(),
+					$txt2 = $(this).siblings('.lbl').children('div').text();
+				if($numTxt < $numTxt2){
+					$num2.text($numTxt2-1);																//클때 넘버링 조정
+					$('.ui-numbering-inp').find('input').eq($numTxt2-2).val($txt2).nextAll().val(''); 	//클때 input:text 에 val 조정
+				} else if($numTxt == $numTxt2){
+					$('.ui-numbering-inp').find('input').eq($numTxt2-1).val('');						//자신일때 input:text 에 val 삭제
+				}
+			});
+			$num.remove();																				//자신일때 넘버링 삭제
+		}
+	});
+	</script>
+</body>
+</html>
