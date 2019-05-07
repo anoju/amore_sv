@@ -9,6 +9,19 @@ $(document).ready(function(){
 	});
 });
 
+//설문항목 이미지타입 체크
+var svItemImgType = function(){
+	if($('.sv_check_item').size() > 0){
+		var $items = $.find('.sv_check_item');
+		$.each($items, function(){
+			var $size = $(this).find('img').size();
+			if($size > 0){
+				$(this).closest('.sv_check_item_wrap').addClass('type3');
+			}
+		});
+	}
+};
+
 //완료 팝업
 var svPopupUI = function(){
 	$(document).on('click','.sv-pop-open',function(e) {
@@ -44,34 +57,74 @@ var complateEffect = function(wrap,length){
 	if(length > 20)length = 20;
 	var $wrap = $(wrap),
 		$itemLength = length,
-		rdClass, rdClass2, rdLeft, rdTop, rdDelay,rdDirection, rdSpeed,
+		rdClass, rdLeft, rdTop, rdDelay,rdDirection, rdSpeed, 
+		$html = '',
 		rdLeftAry = [];
 	for(var i = 0; i < $itemLength;i++){
 		rdClass = randomNumber(1,3,0);
-		//rdColor = randomNumber(1,3,0);
+		rdSize = randomNumber(1,3,0);
 		rdColor = (i%3) + 1;
 		rdLeft = randomNumber(0,20,0) * 5;
-		rdTop = randomNumber(4,18,0) * 5;
-		rdDelay = randomNumber(0,30,0) * 100;
-		rdDirection = randomNumber(1,6,0);
-		rdSpeed = randomNumber(30,70,0) * 100;
+		rdTop = randomNumber(2,14,0) * 5;
+		rdDelay = randomNumber(0,10,0) * 200;
+		//rdDelay = (i%10) * 200;
+		rdDirection = randomNumber(1,2,0);
+		rdSpeed = randomNumber(25,60,0) * 100;
 		
 		if(rdLeftAry.indexOf(rdLeft) >= 0){		//left 랜덤값 겹치지않게
 			i--;
 		}else{
 			rdLeftAry.push(rdLeft);
-			if($wrap.hasClass('type2')){
-				//코인
-				rdSpeed = randomNumber(30,70,0) * 50;
-				$wrap.prepend('<span class="item size'+rdClass+'" style="left:'+rdLeft+'%;animation:confettiDrop '+rdSpeed+'ms infinite ease-out '+rdDelay+'ms;"></span>');
+			if($wrap.hasClass('type1')){
+				//꽃가루(2가지 모션, 3가지 컬러, 3가지 사이즈, 6가지 모양)
+				rdClass = randomNumber(1,6,0);
+				$html = '<span class="item item'+rdClass+' color'+rdColor+' size'+rdSize+'" style="left:'+rdLeft+'%;animation:confettiSwing'+rdDirection+' '+(rdSpeed/2)+'ms infinite '+rdDelay+'ms, confettiDrop '+rdSpeed+'ms infinite ease-out '+rdDelay+'ms;"><span></span></span>';
+			}else if($wrap.hasClass('type2')){
+				//코인(1가지 모양, 3가지 사이즈)
+				rdSpeed = randomNumber(10,15,0) * 100;	//속도조절
+				$html = '<span class="item size'+rdSize+'" style="left:'+rdLeft+'%;animation:confettiCoin '+rdSpeed+'ms infinite linear '+rdDelay+'ms;"></span>';
 			}else if($wrap.hasClass('type3')){
-				//깜빡임
-				rdSpeed = randomNumber(30,70,0) * 50;
-				$wrap.prepend('<span class="item item'+rdClass+' color'+rdColor+'" style="left:'+rdLeft+'%;top:'+rdTop+'%;animation:confettiFlash '+rdSpeed+'ms infinite"></span>');
+				//깜빡임(3가지 모양, 3가지 사이즈, 3가지 컬러)
+				rdSpeed = randomNumber(5,15,0) * 100;	//속도조절
+				rdDelay = randomNumber(0,5,0) * 200;	//딜레이조절
+				$html = '<span class="item item'+rdClass+' color'+rdColor+'" style="left:'+rdLeft+'%;top:'+rdTop+'%;animation:confettiFlash '+rdSpeed+'ms infinite '+rdDelay+'ms"></span>';
+			}else if($wrap.hasClass('type4')){
+				//풍선(3가지 모양, 3가지 사이즈)
+				$html = '<span class="item color'+rdColor+' size'+rdSize+'" style="left:'+rdLeft+'%;animation:confettiBalloon'+rdDirection+' '+(rdSpeed/2)+'ms infinite '+rdDelay+'ms, confettiUp '+rdSpeed+'ms infinite ease-out '+rdDelay+'ms;"></span>';
+			}else if($wrap.hasClass('type5')){
+				//불꽃(3가지 모양)
+				rdTop = randomNumber(0,8,0) * 5;		//top값 조정
+				rdSpeed = randomNumber(15,25,0) * 100;	//속도조절
+				$html = '<span class="item color'+rdColor+'" style="left:'+rdLeft+'%;top:'+rdTop+'%;">';
+				$html += '<span class="firework" style="animation:confettiFirework '+rdSpeed+'ms infinite '+rdDelay+'ms"></span>';
+				$html += '<span class="fire_arr"><i style="animation:confettiFireArr '+rdSpeed+'ms infinite '+rdDelay+'ms"></i></span>';
+				$html += '</span>';
+			}else if($wrap.hasClass('type6')){
+				//하트(2가지 모양, 3가지 각도)
+				rdColor = (i%2) + 1;  					//하트이미지 2종류
+				rdSpeed = randomNumber(5,15,0) * 100;	//속도조절
+				rdDelay = randomNumber(0,5,0) * 200;	//딜레이조절
+				$html = '<span class="item item'+rdClass+' color'+rdColor+'" style="left:'+rdLeft+'%;top:'+rdTop+'%;animation:confettiFlash '+rdSpeed+'ms infinite '+rdDelay+'ms"></span>';
+			}else if($wrap.hasClass('type7')){
+				//별빛(1가지 모양, 4가지 크기)
+				rdTop = randomNumber(0,10,0) * 5;		//top값 조정
+				rdSize = (i%4) + 1;						//크기 4가지
+				rdSpeed = randomNumber(10,15,0) * 100;	//속도조절
+				rdDelay = randomNumber(0,5,0) * 200;	//딜레이조절
+				$html = '<span class="item  size'+rdSize+'" style="left:'+rdLeft+'%;top:'+rdTop+'%;animation:confettiFlash '+rdSpeed+'ms infinite '+rdDelay+'ms"></span>';
+			}else if($wrap.hasClass('type8')){
+				//불꽃2(3가지 모양)
+				rdTop = randomNumber(0,14,0) * 5;		//top값 조정
+				rdSpeed = randomNumber(15,25,0) * 100;	//속도조절
+				$html = '<span class="item color'+rdColor+'" style="left:'+rdLeft+'%;top:'+rdTop+'%;">';
+				$html += '<span class="dot" style="animation:confettiFireworkDot '+rdSpeed+'ms infinite '+rdDelay+'ms"></span>';
+				$html += '<span class="firework" style="animation:confettiFirework2 '+rdSpeed+'ms infinite '+rdDelay+'ms"></span>';
+				$html += '</span>';
 			}else{
-				//꽃가루
-				$wrap.prepend('<span class="item color'+rdColor+'" style="left:'+rdLeft+'%;animation:confettiSwing'+rdDirection+' '+(rdSpeed/2)+'ms infinite '+rdDelay+'ms, confettiDrop '+rdSpeed+'ms infinite ease-out '+rdDelay+'ms;"></span>');
+				console.log('인터렉션 타입 클래스를 적용해주세요');
+				break;
 			}
+			$wrap.prepend($html);
 		}
 	}
 };
@@ -98,6 +151,7 @@ var scrollItem = function(){
 			var $el = $(this),
 				$elHeight = $($el).outerHeight(),
 				$elTop = $($el).offset().top,
+				$elCenter = $elTop + ($elHeight/2),
 				$elBottom = $elTop + $elHeight,
 				$animationClass = $el.data('animation'),
 				$delay = $el.data('delay'),
@@ -117,16 +171,25 @@ var scrollItem = function(){
 						'animation-duration':$duration+'ms'
 					});
 				}
-				$el.addClass('animated');
+				$el.addClass('animated paused '+$animationClass);
 			}
 			if($animationIn){
-				if(($elTop >= $scrollTop) && ($elBottom <= $winBottom)){
-					$el.addClass($animationClass);
+				if(($elTop >= ($scrollTop - ($wHeight/2))) && ($elBottom <= ($winBottom + ($wHeight/2)))){
+					if($el.hasClass('animated')){
+						$el.addClass('paused '+$animationClass);
+					}
 				}else{
-					$el.removeClass($animationClass);
+					if($el.hasClass('animated')){
+						$el.removeClass($animationClass);
+					}else{
+						$el.removeClass($animationClass);
+					}
 				}
-			}else{
-				if(($elBottom >= $scrollTop) && ($elTop <= $winBottom)){
+			}
+			if(($elCenter >= $scrollTop) && ($elCenter <= $winBottom)){
+				if($el.hasClass('animated')){
+					$el.removeClass('paused');
+				}else{
 					$el.addClass($animationClass);
 				}
 			}
@@ -236,10 +299,10 @@ var splitText = function(tar){
 					$html += '-webkit-transition-delay:'+(j*$delay)+'ms;';
 					$html += 'transition-delay:'+(j*$delay)+'ms;';
 					if($distance != null){
-						var $posX = random(-$distance,$distance),
-							$posY = random(-$distance,$distance),
-							$posZ = random(-$distance,$distance),
-							$scale = random(0.3,0.8);
+						var $posX = randomNumber(-$distance,$distance,0),
+							$posY = randomNumber(-$distance,$distance,0),
+							$posZ = randomNumber(-$distance,$distance,0),
+							$scale = randomNumber(0.3,0.8,1);
 
 						$html += '-webkit-transform:translate3d('+$posX+'px,'+$posY+'px,'+$posZ+'px) scale('+$scale+');';
 						$html += 'transform:translate3d('+$posX+'px,'+$posY+'px,'+$posZ+'px) scale('+$scale+');';

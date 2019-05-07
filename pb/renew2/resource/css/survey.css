@@ -40,7 +40,7 @@ a{color:inherit;text-decoration:none;}
 /*main*/
 .img_box img{width:100%;}
 .main_visual{position:relative;height:80vw;background:#75cdf5 url(../images/survey/main_visual.png) no-repeat center bottom;background-size:contain;}
-.main_visual.type2{height:84vw;}
+.main_visual.type2{height:84vw;background-image:url(../images/survey/main_visual2.jpg);}
 .main_visual.bg2{background-image:url(../images/survey/main_visual2.png);}
 .main_visual_tit{text-align:center;color:#fff;font-size:3.7333vw;padding-top:6vw;line-height:1.4;}
 .main_visual_tit strong{display:block;color:#2b586d;font-size:8.6667vw;padding:2vw 0;}
@@ -55,6 +55,7 @@ a{color:inherit;text-decoration:none;}
 .sv_main_btn .ic_info:before{background:url(../images/survey/ic_info.png) no-repeat;}
 .sv_main_btn .ic_ranking:before{background:url(../images/survey/ic_ranking.png) no-repeat;}
 .contents_banner.sv_main_banner{height:26.6667vw;}
+.sv_main_banner .swiper-slide > a{display:block;height:26.6667vw;}
 
 /* contents */
 .sv_inner{position:relative;padding:0 5.3333vw;overflow:hidden;}
@@ -72,7 +73,7 @@ a{color:inherit;text-decoration:none;}
 .sv_guide_num{text-align:center;margin-bottom:3.3333vw;}
 .sv_guide_num > span{position:relative;display:inline-block;padding:2vw 5vw;overflow:hidden;vertical-align:top;}
 .sv_guide_num > span:before,
-.sv_guide_num > span:after{content:'';display:block;width:100%;height:0.2667vw;position:absolute;background:#669aee;-webkit-transition:left 1s;transition:left 1s;}
+.sv_guide_num > span:after{content:'';display:block;width:100%;height:2px;position:absolute;background:#669aee;-webkit-transition:left 1s;transition:left 1s;}
 .sv_guide_num > span:before{left:-100%;top:0;}
 .sv_guide_num > span:after{left:100%;bottom:0;}
 .sv_guide_num.on > span:before{left:100%;}

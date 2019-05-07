@@ -27,12 +27,21 @@
 		<hr class="sv_hr">
 		<div class="sv_inner">
 			<dl class="sv_survey">
-				<dt>헤라 홀리데이 컬렉션의 첫 인상은 어떠신가요? 자유롭게 써주세요. <sub>(30자 이내)</sub></dt>
+				<dt>헤라 홀리데이 컬렉션의 첫 인상은 어떠신가요? 자유롭게 써주세요. <a href="#" class="sv_btn_modal">도움말</a></dt>
 				<dd>
 					<textarea class="sv_textarea" maxlength="30" placeholder="텍스트를 입력해주세요"></textarea>
-					<div class="sv_textarea_byte">0/500자</div>
 				</dd>
 			</dl>
+
+			<!-- 도움말 modal -->
+			<div id="modal_overlay"></div>
+			<div id="modal_modal">
+				<div id="modal_content">
+					<div>본 설문은 고객님께서 이용하신 헤라 제품 개선을 위해 소중한</div><div>의견을 듣고자 실시하고 있습니다.</div>
+				</div>
+				<a id="modal_close" href="#">close</a>
+			</div>
+			<!-- //도움말 modal -->
 		</div>
 		<div class="btn_wrap fixed">
 			<span><a href="#" class="sv_button blue">다음</a></span>

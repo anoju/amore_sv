@@ -29,6 +29,7 @@ var scrollItem = function(){
 			var $el = $(this),
 				$elHeight = $($el).outerHeight(),
 				$elTop = $($el).offset().top,
+				$elCenter = $elTop + ($elHeight/2),
 				$elBottom = $elTop + $elHeight,
 				$animationClass = $el.data('animation'),
 				$delay = $el.data('delay'),
@@ -48,16 +49,25 @@ var scrollItem = function(){
 						'animation-duration':$duration+'ms'
 					});
 				}
-				$el.addClass('animated');
+				$el.addClass('animated paused '+$animationClass);
 			}
-			if($animationIn){
-				if(($elTop >= $scrollTop) && ($elBottom <= $winBottom)){
-					$el.addClass($animationClass);
+			//if($animationIn){
+				if(($elTop >= ($scrollTop - ($wHeight/2))) && ($elBottom <= ($winBottom + ($wHeight/2)))){
+					if($el.hasClass('animated')){
+						$el.addClass('paused '+$animationClass);
+					}
 				}else{
-					$el.removeClass($animationClass);
+					if($el.hasClass('animated')){
+						$el.removeClass($animationClass);
+					}else{
+						$el.removeClass($animationClass);
+					}
 				}
-			}else{
-				if(($elBottom >= $scrollTop) && ($elTop <= $winBottom)){
+			//}
+			if(($elCenter >= $scrollTop) && ($elCenter <= $winBottom)){
+				if($el.hasClass('animated')){
+					$el.removeClass('paused');
+				}else{
 					$el.addClass($animationClass);
 				}
 			}
@@ -145,7 +155,7 @@ var splitText = function(tar){
 			$delay = $(this).data('sp-delay'),
 			$distance = $(this).data('sp-distance');
 
-		if($delay == null)$delay = 100;
+		if($delay == null)$delay = 50;
 
 		$this.css('height',$this.height()).html('');
 		for(var i in $split){
@@ -167,10 +177,10 @@ var splitText = function(tar){
 					$html += '-webkit-transition-delay:'+(j*$delay)+'ms;';
 					$html += 'transition-delay:'+(j*$delay)+'ms;';
 					if($distance != null){
-						var $posX = random(-$distance,$distance),
-							$posY = random(-$distance,$distance),
-							$posZ = random(-$distance,$distance),
-							$scale = random(0.3,0.8);
+						var $posX = randomNumber(-$distance,$distance,0),
+							$posY = randomNumber(-$distance,$distance,0),
+							$posZ = randomNumber(-$distance,$distance,0),
+							$scale = randomNumber(0.3,0.8,1);
 
 						$html += '-webkit-transform:translate3d('+$posX+'px,'+$posY+'px,'+$posZ+'px) scale('+$scale+');';
 						$html += 'transform:translate3d('+$posX+'px,'+$posY+'px,'+$posZ+'px) scale('+$scale+');';
@@ -184,4 +194,8 @@ var splitText = function(tar){
 		$this.html($html).removeAttr('style');
 		if($style)$this.attr('style',$style);
 	});
+};
+
+var randomNumber = function(min,max,point){
+	return ((Math.random() * (max-min)) + min).toFixed(point);
 };
