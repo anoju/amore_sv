@@ -119,8 +119,8 @@ var complateEffect = function(wrap){
 				//코인(1가지 모양, 3가지 사이즈)
 				rdSpeed = randomNumber(10,15,0) * 100;	//속도조절
 				$html = '<span class="item size'+rdSize+'" style="left:'+rdLeft+'%;';
-					$html += '-webkit-animation:confettiCoin '+rdSpeed+'ms linear '+rdDelay+'ms;';
-					$html += 'animation:confettiCoin '+rdSpeed+'ms linear '+rdDelay+'ms;';
+					$html += '-webkit-animation:confettiCoin '+rdSpeed+'ms linear infinite '+rdDelay+'ms;';
+					$html += 'animation:confettiCoin '+rdSpeed+'ms linear infinite '+rdDelay+'ms;';
 				$html += '"></span>';
 			}else if($wrap.hasClass('type3')){
 				//깜빡임(3가지 모양, 3가지 사이즈, 3가지 컬러)
