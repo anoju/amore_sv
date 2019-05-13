@@ -288,10 +288,10 @@ var rollingNumber = function(tar,num){
 		if($split[i] == ','){
 			$this.append('<span class="num-comma">'+$split[i]+'</span>');
 		}else{
-			$this.append('<span class="num-item" style="height:'+$height+'px;line-height:'+$height+'px;"><span class="rol"></span></span>');
+			$this.append('<span class="num-item" style="height:'+$height+'px;line-height:'+$height+'px;"><span class="rol" style="height:'+$height+'px;line-height:'+$height+'px;"></span></span>');
 			for(var j=$repeatNum;j>=0;j--){
 				var k = j%10;
-				$this.find('.num-item').last().find('.rol').append('<span>'+k+'</span>');
+				$this.find('.num-item').last().find('.rol').append('<span style="height:'+$height+'px;line-height:'+$height+'px;">'+k+'</span>');
 			}
 		}
 	}
@@ -313,7 +313,7 @@ var rollingNumber = function(tar,num){
 	$(window).resize(function(){
 		if(isRolling == true) return;
 		$height = $this.height();
-		$this.find('.num-item').css({
+		$this.find('.num-item, .num-item > .rol, .num-item > .rol > span').css({
 			'height':$height+'px',
 			'line-height':$height+'px'
 		});

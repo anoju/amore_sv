@@ -54,7 +54,7 @@ sub{vertical-align:0;}
 .ui-split-text .spt{opacity:0;-webkit-transition:opacity 1s,transform 1s;transition:opacity 1s,transform 1s;display:inline-block;vertical-align:top;-webkit-transform:scale(0.5);transform:scale(0.5);}
 .ui-split-text.on .spt{opacity:1;-webkit-transform:translate3d(0,0,0) scale(1) !important;transform:translate3d(0,0,0) scale(1) !important;}
 .num-item,
-.num-comma{display:inline-block;overflow:hidden;vertical-align:top;}
+.num-comma{display:inline-block;overflow:hidden;vertical-align:top;letter-spacing:0;}
 .num-item .rol{position:relative;display:block;}
 .num-item .rol span{display:block;}
 
