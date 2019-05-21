@@ -3,7 +3,7 @@
 Kakao.init("5ea7c35c641087250a63564a3d2842d1");
 
 //공유하기
-function shareSns($snsType,$title,$image,$description) {
+function shareSns($snsType,$title,$image,$description){
 	var $protocol = location.protocol,
 		$href = location.href,
 		$width = 500,
@@ -11,7 +11,13 @@ function shareSns($snsType,$title,$image,$description) {
 
 	if($title == null || $title == undefined)$title = $('meta[property="og:title"]').attr("content");
 	if($image == null || $image == undefined)$image = $('meta[property="og:image"]').attr("content");
-	if($description == null || $description == undefined)$description = $('meta[property="og:description"]').attr("content");
+	if($description == null || $description == undefined){
+		if($('meta[property="og:description"]').length > 0){
+			$description = $('meta[property="og:description"]').attr("content");
+		}else{
+			$description = '';
+		}
+	}
 		
 	switch ($snsType) {
 		case "facebook":
@@ -34,7 +40,6 @@ function shareSns($snsType,$title,$image,$description) {
 			$href = "//story.kakao.com/share?url=" + $url;
 			break;
 		case "kakao_talk":
-			//console.log($url);
 			Kakao.Link.sendDefault({
 				objectType: "feed",
 				content: {
