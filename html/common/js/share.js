@@ -34,12 +34,13 @@ function shareSns($snsType,$title,$image,$description) {
 			$href = "//story.kakao.com/share?url=" + $url;
 			break;
 		case "kakao_talk":
-			console.log($url);
+			//console.log($url);
 			Kakao.Link.sendDefault({
 				objectType: "feed",
 				content: {
 					title: $title,
 					imageUrl: $image,
+					description: $description,
 					link: {
 						mobileWebUrl: $href,
 						webUrl: $href
