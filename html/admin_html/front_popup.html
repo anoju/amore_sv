@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=10,IE=EmulateIE9,chrome=1" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>Amorepacific Beautypoint</title>
+	<link rel="stylesheet" type="text/css" href="../common/css/mobile/animate.css">
+	<link rel="stylesheet" type="text/css" href="../common/css/mobile/front.css">
+</head>
+
+<body>
+	<div class="sv_pop_view">
+		<div class="sv_pop_view_head">
+			<h1>응답문항 결과보기</h1>
+			<a href="javascript:self.close();" class="sv_pop_view_close">닫기</a>
+		</div>
+		<div class="sv_pop_view_cont">
+			<!-------------------------------------실제 컨텐츠만 들어갈곳(하얀박스) ------------------------------------->
+			<div class="sv_survey_wrap">
+				<!-- 사용? -->
+				<!-- <div class="sv_inner">
+					<div class="sv_today_score">
+						<dl class="info">
+							<dt>오늘의 설문</dt>
+							<dd>10/20개</dd>
+						</dl>
+						<div class="sv_graph">
+							<div class="line">
+								<div class="bar" style="width:10%;"></div>
+								<div class="mark"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr class="sv_hr"> -->
+				<div class="sv_inner">
+					<dl class="sv_survey">
+						<dt>귀하께서는 다음의 품목을 얼마나 자주 사용하십니까?</dt>
+						<dd>
+							<div class="sv_check_tit">기초화장품</div>
+							<div class="sv_check_item_wrap">
+								<label class="sv_check_item">
+									<input type="radio" name="radio" id="" disabled="disabled" checked="checked">
+									<div class="lbl">
+										<div>매일</div>
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="radio" name="radio" id="" disabled="disabled">
+									<div class="lbl">
+										<div>일주일에 5일</div>
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="radio" name="radio" id="" disabled="disabled">
+									<div class="lbl">
+										<div>일주일에 2일</div>
+									</div>
+								</label>
+							</div>
+
+							<div class="sv_check_tit">색조화장품</div>
+							<div class="sv_check_item_wrap">
+								<label class="sv_check_item">
+									<input type="radio" name="radio2" id="" disabled="disabled" checked="checked">
+									<div class="lbl">
+										<div>매일</div>
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="radio" name="radio2" id="" disabled="disabled">
+									<div class="lbl">
+										<div>일주일에 5일</div>
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="radio" name="radio2" id="" disabled="disabled">
+									<div class="lbl">
+										<div>일주일에 2일</div>
+									</div>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<hr class="sv_hr">
+
+					<dl class="sv_survey">
+						<dt>라네즈 크림스킨에 대한 만족도 점수를 적어주세요. <sub>(항목당 최대 20점)</sub></dt>
+						<dd>
+							<table class="sv_table">
+								<caption>만족도 설문조사</caption>
+								<colgroup>
+									<col style="width:55%">
+									<col style="width:45%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">항목</th>
+										<th scope="col">점수</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>가격</td>
+										<td><input type="tel" placeholder="입력해주세요" readonly="readonly" value="10"></td>
+									</tr>
+									<tr>
+										<td>용량</td>
+										<td><input type="tel" placeholder="입력해주세요" readonly="readonly" value="10"></td>
+									</tr>
+									<tr>
+										<td>성분</td>
+										<td><input type="tel" placeholder="입력해주세요" readonly="readonly" value="10"></td>
+									</tr>
+									<tr>
+										<td>보습력</td>
+										<td><input type="tel" placeholder="입력해주세요" readonly="readonly" value="10"></td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td>합계</td>
+										<td><input type="tel" readonly="readonly" value="40"></td>
+									</tr>
+								</tfoot>
+							</table>
+						</dd>
+					</dl>
+
+					<hr class="sv_hr">
+
+					<dl class="sv_survey">
+						<dt>다음은 트루웨어 파운데이션 영상입니다. 해당 제품을 구매할 의사가 있습니까?
+							<iframe width="854" height="480" src="https://www.youtube.com/embed/CEJvE5QzcjU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						</dt>
+						<dd>
+							<div class="sv_check_item_wrap">
+								<label class="sv_check_item">
+									<input type="radio" name="radio3" id="" disabled="disabled" checked="checked">
+									<div class="lbl">
+										<div>네</div>
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="radio" name="radio3" id="" checked="checked">
+									<div class="lbl">
+										<div>아니오</div>
+									</div>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<hr class="sv_hr">
+
+					<dl class="sv_survey">
+						<dt>귀하께서는 하루에 스킨&크림을 몇 회 바르십니까?</dt>
+						<dd>
+							<div class="sv_input_box">
+								하루에 스킨을 
+								<br><input type="number" placeholder="입력해주세요" readonly="readonly" value="1">회 사용합니다.
+							</div>
+							<div class="sv_input_box">
+								하루에 크림을 
+								<br><input type="number" placeholder="입력해주세요" readonly="readonly" value="2">회 사용합니다.
+							</div>
+						</dd>
+					</dl>
+
+					<hr class="sv_hr">
+
+					<dl class="sv_survey">
+						<dt>당신에게 가장 잘 어울리는 컬러톤은 무엇인가요? <sub>(2개 이상 선택 필수)</sub></dt>
+						<dd>
+							<div class="blind ui-numbering-inp">
+								1순위) <input type="text" name="rank" value="파스텔톤"><br>
+								2순위) <input type="text" name="rank" value="원색"><br>
+								3순위) <input type="text" name="rank" value="무채색"><br>
+								4순위) <input type="text" name="rank" value="기타"><br>
+							</div>
+							<div class="sv_check_item_wrap ui-check-numbering">
+								<label class="sv_check_item">
+									<input type="checkbox" name="checkbox" id="" checked="checked" disabled="disabled">
+									<div class="lbl">
+										<div>원색</div>
+										<!-- <span class="num">2</span> --><!-- 하단 스크립트 함수로 처리-->
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="checkbox" name="checkbox" id="" checked="checked" disabled="disabled">
+									<div class="lbl">
+										<div>파스텔톤</div>
+										<!-- <span class="num">1</span> --><!-- 하단 스크립트 함수로 처리-->
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="checkbox" name="checkbox" id="" checked="checked" disabled="disabled">
+									<div class="lbl">
+										<div>무채색</div>
+										<!-- <span class="num">3</span> --><!-- 하단 스크립트 함수로 처리-->
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="checkbox" name="checkbox" id="" checked="checked" disabled="disabled">
+									<div class="lbl">
+										<div>기타</div>
+										<!-- <span class="num">4</span> --><!-- 하단 스크립트 함수로 처리-->
+									</div>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<hr class="sv_hr">
+
+					<dl class="sv_survey">
+						<dt>헤라 홀리데이 컬렉션의 첫 인상은 어떠신가요? 자유롭게 써주세요. <sub>(30자 이내)</sub></dt>
+						<dd>
+							<textarea class="sv_textarea" maxlength="30" placeholder="텍스트를 입력해주세요" readonly="readonly">좋은 화장품이네요~ 담에 또 구매할게요</textarea>
+							<div class="sv_textarea_byte">21/500자</div>
+						</dd>
+					</dl>
+					
+					<hr class="sv_hr">
+
+					<dl class="sv_survey">
+						<dt>시즌 컬렉션, RED VIBE에서 가장 마음에 드는 제품은 무엇인가요?</dt>
+						<dd>
+							<div class="sv_check_item_wrap">
+								<label class="sv_check_item">
+									<input type="radio" name="radio4" id="" disabled="disabled" checked="checked">
+									<div class="lbl">
+										<div>
+											<img src="../common/image/survey/@sv_img.png" alt="이미지">
+											센슈얼 인텐스 벨벳 센슈얼 인텐스 벨벳 센슈얼 인텐스 벨벳 센슈얼 인텐스 벨벳
+										</div>
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="radio" name="radio4" id="" disabled="disabled">
+									<div class="lbl">
+										<div>
+											<img src="../common/image/survey/@sv_img2.png" alt="이미지">
+											센슈얼 인텐스 벨벳 센슈얼 인텐스 벨벳
+										</div>
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="radio" name="radio4" id="" disabled="disabled">
+									<div class="lbl">
+										<div>
+											<img src="../common/image/survey/@sv_img3.png" alt="이미지">
+											센슈얼 인텐스 벨벳
+										</div>
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="radio" name="radio4" id="" disabled="disabled">
+									<div class="lbl">
+										<div>
+											<img src="../common/image/survey/@sv_img4.png" alt="이미지">
+											센슈얼 인텐스 벨벳
+										</div>
+									</div>
+								</label>
+							</div>
+						</dd>
+					</dl>
+
+					<hr class="sv_hr">
+
+					<dl class="sv_survey">
+						<dt>헤라 홀리데이 컬렉션 컨셉이 전반적으로 얼마나 마음에 드시나요?</dt>
+						<dd>
+							<div class="sv_check_item_wrap type4">
+								<label class="sv_check_item">
+									<input type="radio" name="radio5" id="" disabled="disabled" checked="checked">
+									<div class="lbl">
+										<div>매우 마음에 든다</div>
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="radio" name="radio5" id="" disabled="disabled">
+									<div class="lbl">
+										<div>마음에 든다</div>
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="radio" name="radio5" id="" disabled="disabled">
+									<div class="lbl">
+										<div>보통이다</div>
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="radio" name="radio5" id="" disabled="disabled">
+									<div class="lbl">
+										<div>마음에 들지 않는다</div>
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="radio" name="radio5" id="" disabled="disabled">
+									<div class="lbl">
+										<div>전혀 마음에 들지 않는다</div>
+									</div>
+								</label>
+							</div>
+						</dd>
+					</dl>
+			
+				</div>
+			</div>
+			<!-------------------------------------//실제 컨텐츠만 들어갈곳(하얀박스) ------------------------------------->
+		</div>
+	</div>
+
+	<script src="../common/js/jquery-1.9.1.min.js"></script>
+	<script src="../common/js/ui-front.js"></script>
+	<script>
+	svItemImgType();		//이미지형, 동영상 감싸기 스크립트 함수
+	svCheckboxNumbering();	//체크박스 넘버링 함수
+	</script>
+</body>
+</html>

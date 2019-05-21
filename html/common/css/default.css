@@ -1,0 +1,320 @@
+@charset "utf-8";
+/********************************************************************
+Publishing : 임현진
+Beginning : 2014-09
+*********************************************************************/
+
+@import url("common.css");
+@import url("editor.css");
+
+/*------------------------------------------------------------------------------------------------*/
+/*외부 Block에 사용되는 Tag Style */
+/*------------------------------------------------------------------------------------------------*/
+
+.location
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size : 12px;
+	color: #fff;
+	text-align: left;
+}
+
+.login
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size : 11px;
+	color: #313747;
+	padding-left:10px;
+	text-align: right;
+}
+
+.inside_box
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size : 12px;
+	margin-top: 7px;
+	margin-left: 7px;
+
+}
+
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------*/
+/*	타이틀관련  Tag Style */
+/*------------------------------------------------------------------------------------------------*/
+
+.title_main_sub
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size : 12px;
+	font-weight: bold;
+	color:  #495a77;
+	text-decoration: none;
+}
+.title_top
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	height :30px;
+	color:  #495a77;
+	text-decoration: none;
+	background-color: #f5f5f5;
+	text-indent:10;
+}					
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------------------------*/
+/*	Table에 적용된 TR or TD Tag Style */
+/*------------------------------------------------------------------------------------------------*/
+
+.table_basic
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size:12px;
+	color:#5c5c5a;
+	background-color:#d3d0cb;
+	}
+
+.td_text
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size:12px;
+	color:#5c5c5a;
+	background:white;
+
+}
+
+.td_brown_center
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size:12px;
+	color:#5c5c5a;
+	text-align: center;
+	background:#f9f9f9;
+	padding : 5px;
+	height : 23px;
+	}
+
+.td_brown_left
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size:12px;
+	color:#4e4e4e;
+	text-align: left;
+	background:#e2e2e2;
+	padding : 7px 7px 7px 12px;
+	height : 23px;
+	}
+
+.td_second_brown_left
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size:12px;
+	color:#5c5c5a;
+	text-align: left;
+	background:#f3f3f3;
+	padding : 7px 7px 7px 10px;
+	height : 23px;
+	}
+
+.td_second_brown_center
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size : 12px;
+	color : #5c5c5a;
+	text-align : center;
+	background : #f3f3f3;
+	padding : 5px;
+	height : 23px;
+	}
+
+.td_white_left
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size:12px;
+	color:#5c5c5a;
+	text-align: left;
+	padding : 5px;
+	height : 23px;
+	background:#fff;
+	}
+.td_white_left a:link    {	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;	font-size : 12px;	color:  #625f56;	text-decoration: none;}
+.td_white_left a:visited {	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;	font-size : 12px;	color:  #625f56;	text-decoration: none;}
+.td_white_left a:hover   {	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;	font-size : 12px;	color:  #448cca;	text-decoration: underline;}
+.td_white_left a:active  {	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;	font-size : 12px;	color:  #625f56;	text-decoration: none;}
+
+.td_white_right
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size:12px;
+	color:#5c5c5a;
+	text-align: right;
+	padding : 5px;
+	height : 23px;
+	background:#FFFFFF;
+	}
+
+.td_white_center
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size:12px;
+	color:#5c5c5a;
+	text-align: center;
+	padding : 5px;
+	height : 23px;
+	background:#FFFFFF;
+	}
+
+.tr_white_center
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size:12px;
+	color:#5c5c5a;
+	text-align: center;
+	padding : 5px;
+	height : 23px;
+	background:#FFFFFF;
+	}
+
+.tr_white_left
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size:12px;
+	color:#5c5c5a;
+	text-align: left;
+	padding : 5px;
+	height : 23px;
+	background:#FFFFFF;
+	}
+
+
+.td_darkbrown_center
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size:12px;
+	color:#FFFFFF;
+	text-align: center;
+	background:#adadad;
+	padding : 5px;
+	height : 23px;
+	}
+	
+.table_darkbrown
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size:12px;
+	color:#5c5c5a;
+	background:#adadad;
+	}
+		
+/*------------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------------------------*/
+/*	Tree에 적용된 Tag Style */
+/*------------------------------------------------------------------------------------------------*/
+img.treeImage {
+	vertical-align: middle ;
+}
+span.treeData {
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;	
+	font-size : 12px;	
+	color:  #625f56;	
+	text-decoration: none;
+	vertical-align: middle;
+}
+input.treeCheckBox {
+	vertical-align: middle;
+	height: 18px; 
+}
+
+.valid_required { background-image : url('../image/required03.gif'); background-position:top right; background-repeat:no-repeat;}
+.valid_dek { z-index: 200; visibility: hidden; overflow: hidden; position: absolute }
+.valid_right { text-align: right }
+.valid_center { text-align: right }
+.valid_edit_box { border-right: #a6a6a6 1px solid; border-top: #a6a6a6 1px solid; font-size: 12px; border-left: #a6a6a6 1px solid; border-bottom: #a6a6a6 1px solid; font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif; background-color: #ffffff }
+.valid_button { border-right: #d0d0d0 1px ridge; border-top: #d0d0d0 1px ridge; border-left: #d0d0d0 1px ridge; border-bottom: #d0d0d0 1px ridge; height: 19px; background-color: #dfdfdf }
+.valid_plain { border-right: #a6a6a6 1px solid; border-top: #a6a6a6 1px solid; font-size: 12px; border-left: #a6a6a6 1px solid; border-bottom: #a6a6a6 1px solid; font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif; background-color: #ffffff }
+.valid_imekor { ime-mode: active }
+.valid_imeeng { ime-mode: inactive }
+.valid_imedis { ime-mode: disabled }
+.valid_lable { border-right: black 0px solid; border-top: black 0px solid; border-left: black 0px solid; border-bottom: black 0px solid; background-color: transparent }
+
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------*/
+/*	sms에 적용된 Tag Style */
+/*------------------------------------------------------------------------------------------------*/
+.phone {
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size: 12px;
+	color: #495a77;
+}
+
+.btn {
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size: 12px;
+	background-image: url(../image/but_bg.gif);
+	color: #FFFFFF;
+	height: 23px;
+	width:100%;
+	cursor: hand;
+	border: none;
+}
+.btn2 {
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size: 12px;
+	background-image: url(../image/but2_bg.gif);
+	color: #FFFFFF;
+	height: 23px;
+	width:100%;
+	cursor: hand;
+	border: none;
+}
+.btn3 {
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size: 12px;
+	background-image: url(../image/but3_bg.gif);
+	color: #FFFFFF;
+	height: 23px;
+	width:100%;
+	cursor: hand;
+	border: none;
+}
+
+/* 추가 */
+.td_calender
+{
+	height:80px;
+	}
+	
+.td_brown_right
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size:12px;
+	color:#5c5c5a;
+	text-align: right;
+	background:#ffffad;
+	padding:7px;
+	height : 23px;
+	border-right:#c6d1de 1px solid;
+	border-bottom:#c6d1de 1px solid;
+}
+
+.td_left
+{
+	font-family:'맑은 고딕','Malgun Gothic',AppleGothic,Helvetica,Sans-serif;
+	font-size:13px; 
+	color:#5c5c5a; 
+	text-align: right;	
+	padding : 5px;
+	background:#fff;
+	font-weight:bold;
+	border-right:#c6d1de 1px solid;
+	border-bottom:#c6d1de 1px solid;
+	}

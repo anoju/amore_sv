@@ -1,0 +1,30 @@
+@charset "utf-8";
+/********************************************************************
+Publishing : 임현진
+Beginning : 2014-09
+*********************************************************************/
+
+/********** 공통요소 CSS **********/
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button {margin:0;padding:0;}
+div,dl,dt,dd,h1,h2,h3,h4,h5,form,fieldset,p,th,td,input {font-family:"맑은 고딕", "dotum", "gulim", "verdana", sans-serif; font-size:12px; color:#777;}
+
+img {border:0; vertical-align:top;}
+fieldset {border:0; margin:0; padding:0;}
+textarea {margin:0; border:1px solid #a6dfea; font-family:"맑은 고딕", "dotum", "gulim", "verdana", sans-serif; font-size:12px; background:#fcfdea;}
+select, input {font-family:"맑은 고딕", "dotum", "gulim", "verdana", sans-serif; vertical-align:middle; font-size:12px;}
+ul, ol {list-style-type : none;}
+dt, dd, h1 , h2, h3, h4, h5, h6 {padding:0; margin:0;}
+
+a,
+a:link,
+a:visited,
+a:active {background:none; text-decoration:none;}
+a:hover,
+a:focus {background:none; text-decoration:underline;}
+legend {visibility:hidden; height:0; width:0; font-size:0; line-height:0; overflow:hidden; left:-9999px; top:-9999px;}
+hr {visibility:hidden; height:0; width:0; font-size:0; line-height:0; overflow:hidden; position:absolute; left:-9999px; top:-9999px;}
+caption {overflow:hidden; visibility:hidden; width:0; height:0; font-size:0; line-height:0;}
+em, address {font-style:normal;}
+button {background:transparent; border:0; font-family:"맑은 고딕", "dotum", "gulim", "verdana", sans-serif; font-size:12px; cursor:pointer; padding:0; overflow:visible; vertical-align:top;}
+/*table {border-collapse:collapse; border-spacing:0;}
+table {border-collapse:collapse; table-layout:fixed; border-spacing:0;}*/

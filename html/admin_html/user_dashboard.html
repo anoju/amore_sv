@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BIZenic8 Demo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=EmulateIE9,chrome=1" />
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW"> 
+<meta name="GOOGLEBOT" content="NOSNIPPET"> 
+<meta name="ROBOTS" v="NOARCHIVE"> 
+
+<link rel="stylesheet" type="text/css" href="../common/css/color_blue.css">
+<link rel="stylesheet" type="text/css" href="../common/css/default.css">
+
+<link rel="shortcut icon" href="../common/image/favicon.ico">
+<script language="JavaScript" type="text/JavaScript" src="../common/js/bizenic.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/jquery-1.9.1.min.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/validator.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/date_picker.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/message/message_ko.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/imgOperate.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/common_main.js"></script>
+<script type="text/javascript" src="../common/js/respond.js"></script>
+<script src="../common/js/chart_JUI/core_160327.js"></script>
+<script src="../common/js/chart_JUI/chart_160327.js"></script>
+
+<!-- 추가 css,js -->
+<link rel="stylesheet" type="text/css" href="../common/css/select2.min.css">
+<link rel="stylesheet" type="text/css" href="../common/css/amore.css">
+<script type="text/javascript" src="../common/js/select2.min.js"></script>
+<script type="text/javascript" src="../common/js/amore.js"></script>
+<!-- //추가 css,js -->
+</head>
+<body>
+<!-- wrap : s -->
+<div id="wrap">
+	<!-- header : s -->
+	<div id="headerWr">
+		<div class="topWrap">
+				<div class="header">
+				<!-- LOGO : s 세로사이즈는 26px 가로사이즈는 180px을 넘지 않는다.-->
+				<h1><a href="#"><img src="../common/image/amore/logo.png" alt="아모레 퍼시픽"></a></h1>
+				<!-- LOGO : e 세로사이즈는 26px 가로사이즈는 180px을 넘지 않는다.-->
+				
+				<!-- 로그아웃, 나의정보, 메뉴얼 : s -->
+				<div class="snb">
+					<ul class="etc_img">
+						<li><a href="../logoutCtl.jsp?sessID=223_38_23_129542_0"><img src="../common/image/btn_logout_ko_blue.gif" /></a></li>
+						<li><a href="javascript:jsMyinfo()"><img src="../common/image/btn_myinfo_ko_blue.gif"/></a></li>
+					</ul>
+				</div>
+				<!-- 로그아웃, 나의정보, 메뉴얼 : e -->
+				<!------------------------------	탑메뉴 시작 ------------------------------------------>	 
+				<!-- gnb : s -->		 
+				<div class="gnb">
+					<ul>
+						<li>
+							<a href="#">설문 관리</a>
+							<!-- 2depth : s -->
+							<div class="depth2" >
+								<ul>
+									<li><a href="#">설문지</a></li>
+									<li><a href="#">설문진행</a></li>
+									<li><a href="#">설문스킨</a></li>
+									<li><a href="#">설문분석</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">설문 대시보드</a>
+							<!-- 2depth : s -->
+							<div class="depth2" >
+								<ul>
+									<li><a href="#">설문 대시보드</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">응답자 대시보드</a>
+							<!-- 2depth : s -->
+							<div class="depth2" >
+								<ul>
+									<li><a href="#">응답자 개요</a></li>
+									<li><a href="#">일별 참여 현황</a></li>
+									<li><a href="#">응답자별 참여 현황</a></li>
+									<li><a href="#">응답자 조회</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">솔루션</a>
+							<!-- 2depth : s -->
+							<div class="depth2" >
+								<ul>
+									<li><a href="#">사용자</a></li>
+									<li><a href="#">DB 연결정보</a></li>
+									<li><a href="#">트리</a></li>
+									<li><a href="#">공지사항</a></li>
+									<li><a href="#">로그인</a></li>
+									<li><a href="#">개인정보로그</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">시스템</a>
+						</li>
+					</ul>
+				</div>
+			<!-- gnb : e -->
+			<!------------------------------	탑메뉴 끝------------------------------------------>
+			</div>
+		</div>
+		<!-- header : e -->
+		<div id="container">
+		</div>
+	</div>
+</div>
+<!-- wrap : e -->
+<!-- contents : s -->
+<div id="content">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<th colspan="2" align="left" valign="top">
+				<!-------------------------------------	현재 위치맵	----------------------------------------------->
+				<div id="Rcon">
+					<div class="location">
+						<span><a href="#">응답자 대시보드</a></span><strong>일별 참여 현황</strong>
+					</div>
+				</div>
+				<!-------------------------------------	현재 위치맵 끝 ----------------------------------------------->
+			</th>
+		</tr>
+		<tr>
+			<td align="left" valign="top">
+				<!-------------------------------------	현재 큰 타이틀	----------------------------------------------->
+				<div id="Rcon">
+					<div class="title">응답자 개요</div>
+				</div>
+				<!-------------------------------------	현재 큰 타이틀 끝 ----------------------------------------------->
+			</td>
+			<td align="right" valign="top">
+				<!-- <div id="Rcon">
+					<div class="admin">아모레퍼시픽 님이 로그인 하셨습니다.
+						<a href="javascript:jsUserLang('ko')"><img src="../../../common/image/lan_ko_on.gif"></a><a href="javascript:jsUserLang('en')"><img src="../../../common/image/lan_en.gif"></a><a href="javascript:jsUserLang('jp')"><img src="../../../common/image/lan_jp.gif"></a><a href="javascript:jsUserLang('cn')"><img src="../../../common/image/lan_cn.gif"></a>
+					</div>
+				</div> -->
+			</td>
+		</tr>
+	</table>
+
+	<!--컨텐츠 시작 -->
+	<div class="am_container">
+		<h2 class="title">실시간 참여 현황</h2>
+		<table class="count_tbl">
+			<colgroup>
+				<col style="width:33%;">
+				<col style="width:33%;">
+				<col style="width:33%;">
+			</colgroup>
+			<tbody>
+				<tr>
+					<td>
+						<div class="count_tbl_lbl">
+							<div class="tit">누적 설문 참여자 수</div>
+							<div class="sub">Last day : <span>1,244</span>명</div>
+						</div>
+						<div class="count_tbl_cut">
+							<div class="count_txt"><strong>1,420</strong>명</div>
+							<div class="ratio_txt">
+								(<span class="fc_red">14.1% ▲</span>) <!-- 상승 -->
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="count_tbl_lbl">
+							<div class="tit">당일 설문완료 고객 수</div>
+							<div class="sub">Daily average for last month : <span>78</span>명</div>
+						</div>
+						<div class="count_tbl_cut">
+							<div class="count_txt"><strong>106</strong>명</div>
+							<div class="ratio_txt">
+								(<span class="fc_blue">35.9% ▼</span>) <!-- 하락 -->
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="count_tbl_lbl">
+							<div class="tit">당일 설문 참여자 수</div>
+							<div class="sub">Daily average for last month : <span>138</span>명</div>
+						</div>
+						<div class="count_tbl_cut">
+							<div class="count_txt"><strong>176</strong>명</div>
+							<div class="ratio_txt">
+								(<span class="fc_gray">0% -</span>) <!-- 변동없음 -->
+							</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 class="title">기간 내 참여 현황</h2>
+		<div class="am_cont_box">
+			<table class="am_table">
+				<colgroup>
+					<col width="12%">
+					<col width="38%">
+					<col width="12%">
+					<col width="38%">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">기간</th>
+						<td>
+							<div class="am_input_date">
+								<input type="text" id="dp_start" name="start_dt" class="am_input datepicker">
+								<span>~</span>
+								<input type="text" id="dp_end" name="end_dt" class="am_input datepicker">
+							</div>
+							<a href="#" class="am_btn round blue">기간 적용</a>
+						</td>
+						<th scope="row">설문 참여자 수</th>
+						<td scope="row"><span class="fc_black">1,000명</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="fc_red mt15">설정한 기간 내 현황이 노출되며, 전일까지 조회 가능합니다.</p>
+
+			<div class="am_chart_col3">
+				<div>
+					<h3 class="am_title black">피부밝기별 참여 현황</h3>
+					<div class="am_chart">
+						<div><img src="../common/image/amore/@chart4.jpg" alt="임시 막대차트"></div>
+					</div>
+				</div>
+				<div>
+					<h3 class="am_title black">피부밝기별 참여 현황</h3>
+					<div class="am_chart">
+						<div><img src="../common/image/amore/@chart5.jpg" alt="임시 원형차트"></div>
+					</div>
+				</div>
+				<div>
+					<h3 class="am_title black">뷰티레벨 참여 현황</h3>
+					<div class="am_chart">
+						<div><img src="../common/image/amore/@chart6.jpg" alt="임시 원형차트"></div>
+					</div>
+				</div>
+			</div>
+			<div class="am_chart_col3">
+				<div>
+					<h3 class="am_title black">피부고민별 참여 현황</h3>
+					<div class="am_chart">
+						<div><img src="../common/image/amore/@chart9.jpg" alt="임시 막대차트"></div>
+					</div>
+				</div>
+				<div>
+					<h3 class="am_title black">피부톤별 참여 현황</h3>
+					<div class="am_chart">
+						<div><img src="../common/image/amore/@chart7.jpg" alt="임시 원형차트"></div>
+					</div>
+				</div>
+				<div>
+					<h3 class="am_title black">피부타입별 참여 현황</h3>
+					<div class="am_chart">
+						<div><img src="../common/image/amore/@chart8.jpg" alt="임시 원형차트"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="am_util">
+		<div class="am_util_btn">
+			<a href="#" class="am_btn h40 gray btn_in_icon"><i class="ic_pdf"></i>가이드 다운로드</a>
+		</div>
+	</div>
+	<!--컨텐츠 끝 -->
+</div>
+<!-- contents : e -->
+</body>
+</html>

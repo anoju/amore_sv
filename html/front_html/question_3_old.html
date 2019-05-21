@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>Amorepacific Beautypoint</title>
+	<link rel="stylesheet" type="text/css" href="../common/css/mobile/animate.css">
+	<link rel="stylesheet" type="text/css" href="../common/css/mobile/front.css">
+</head>
+
+<body>
+	<!-- Contents -->
+	<div class="sv_survey_wrap">
+		<div class="sv_inner">
+			<div class="sv_today_score">
+				<dl class="info">
+					<dt>오늘의 설문</dt>
+					<dd>10/20개</dd>
+				</dl>
+				<div class="sv_graph">
+					<div class="line">
+						<div class="bar" style="width:30%;"></div>
+						<div class="mark"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="sv_hr">
+		<div class="sv_inner">
+			<dl class="sv_survey">
+				<dt>다음은 트루웨어 파운데이션 영상입니다. 해당 제품을 구매할 의사가 있습니까?</dt>
+				<dd>
+					<!-- 동영상은 앱 내에 업로드된 컨텐츠 중 임의로 갖고 왔습니다. -->
+					<div class="video_area" id="videoArea">
+						<div class="inner">
+							<video id="BPvideo"
+							data-video-id="6025370408001" 
+							data-account="5136026600001" 
+							data-player="nD7oXE6go" 
+							data-embed="default" 
+							data-application-id 
+							class="video-js" 
+							controls 
+							playsinline></video>
+						</div>
+					</div>
+					<!-- //video 영역 -->
+			
+					<div class="sv_check_item_wrap">
+						<label class="sv_check_item">
+							<input type="radio" name="radio" id="">
+							<div class="lbl">
+								<div>네</div>
+							</div>
+						</label>
+						<label class="sv_check_item">
+							<input type="radio" name="radio" id="">
+							<div class="lbl">
+								<div>아니오</div>
+							</div>
+						</label>
+					</div>
+				</dd>
+			</dl>
+		</div>
+		<div class="btn_wrap fixed">
+			<span><a href="#" class="sv_button blue">다음</a></span>
+		</div>
+	</div>
+	<!-- //Contents -->
+
+	<!-- JS -->
+	<script src="../common/js/jquery-1.9.1.min.js"></script>
+	<script src="../common/js/ui-front.js"></script>
+
+	<!-- 동영상 관련 스크립트 -->
+	<script src="//players.brightcove.net/5136026600001/nD7oXE6go_default/index.min.js"></script>
+	<script type="text/javascript">
+		var muteButton = null;
+		videojs( 'BPvideo' ).ready(function(){
+			var BPPlayer = this;
+			$('.vjs-volume-panel-horizontal,.vjs-mute-control,.vjs-current-time,.vjs-time-divider,.vjs-duration').show();
+			BPPlayer.controlBar.playToggle.enable();
+			BPPlayer.on( 'play', function() {
+				
+				appTaging('E','채널^콘텐츠상세','APP_CONTENT_DETAIL','재생하기',seriesNm+'_'+subject+'_재생');
+			});
+
+			BPPlayer.on('volumechange', function(evt){
+				if(!BPPlayer.muted() && muteButton) {
+					document.getElementById('videoArea').removeChild(muteButton);
+					muteButton = null;
+				}
+			});
+
+			function appendButton() {
+				muteButton = document.createElement("button");
+
+				muteButton.addEventListener("click", function() {
+					BPPlayer.muted(false);
+					document.getElementById('videoArea').removeChild(muteButton);
+					muteButton = null;
+				});
+
+				muteButton.classList.add("btn_muted");
+
+				document.getElementById('videoArea').appendChild(muteButton);
+			}
+
+			BPPlayer.on("loadedmetadata", function() {
+				BPPlayer.muted(true);
+				var promise = BPPlayer.play();
+				if (promise !== undefined) {
+					promise
+						.then(function() {
+							if(BPPlayer.muted()) {
+								appendButton();
+							}
+						})
+						.catch(function(error) {
+							BPPlayer.muted(true);
+							BPPlayer.play();
+							appendButton();
+						});
+				}
+			});
+		});
+	</script>
+</body>
+</html>

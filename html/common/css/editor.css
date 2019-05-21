@@ -1,0 +1,274 @@
+@charset "utf-8";
+
+.editor {float:left;width:100%;}
+.editor_head {height:27px;border:1px solid #9fc2db;border-bottom:none;background:url(../image/editor/editor_head_bg.gif) repeat-x;}
+.editor_page{float:left;width:56px;background:url(../image/editor/editor_title_bg.gif) no-repeat;}
+.editor_page a.prev {float:left;width:28px;height:24px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-112px -41px}
+.editor_page a.prev:hover {float:left;width:28px;height:24px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-139px -41px}
+.editor_page a.next {float:left;width:28px;height:24px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-171px -41px}
+.editor_page a.next:hover {float:left;width:28px;height:24px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-198px -41px}
+.editor_menu{float:left;height:23px;}
+.editor_menu ul {float:left;margin-left:-1px}
+.editor_menu ul li{float:left;width:90px;line-height:22px;_line-height:21px;list-style:none; display:inline;font-size:11px;font-family:dotum,'맑은 고딕'; text-align:center;background:url(../image/editor/editor_menu_line.gif) no-repeat right top}
+.editor_menu ul li a{display:inline-block;padding:1px 0 2px;_padding:2px 0 1px;background-position:100% 0;color:#fff;text-decoration:none !important;outline:0;}
+.editor_menu ul li a:hover {color:#5384a3;text-decoration:none !important;}
+.editor_menu ul li.on,.editor_menu ul li.on a{float:left;width:530px;color:#ffffff;text-align:left;padding-left:10px}
+.editor ul li.none {background:none}
+.editor_body {height:80px;border:1px solid #9fc2db;border-top:none;background:url(../image/editor/editor_body_bg.gif) repeat-x}
+.editor_body_l {float:left;width:55px;height:79px;background:url(../image/editor/editor_body_left_bg.gif) repeat-y;}
+.editor_body_l span{padding-top: 11px}
+.editor_body_r {float:left;height:80px;}
+.editor_save {float:left;width:55px;margin-left:17px}
+.editor_save a {float:left;padding:20px 0 8px;height:13px;width:22px;font-family:dotum,'맑은 고딕';font-size:11px;color:#004a80;background:url(../image/editor/ico_pack.png) no-repeat;background-position:1px -43px}
+.editor_save a:hover {color:#004a80;text-decoration:none !important;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-26px -43px}
+.editor_open {float:left;width:30px;margin-left:17px}
+.editor_open a {float:left;padding-top:23px;height:13px;width:23px;font-family:dotum,'맑은 고딕';font-size:11px; line-height:14px; color:#004a80;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-55px -43px}
+.editor_open a:hover {color:#004a80;text-decoration:none !important;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-85px -43px}
+.editor_row1 {float:left;display:block}
+.editor_row2 {float:none;margin-top:30px;.float:none;.margin-top:8px;}
+.editor_content {float:left;}
+.editor_content ul li {float:left;display:inline;width:70px;_width:90px;height:70px;background:url(../image/editor/editor_body_line.gif) repeat-y right top;padding:10px 0 0 20px;}
+.editor_content ul li.on {float:left;width:520px;_width:540px;}
+.editor_content img{float:left;}
+.editor_img {float:left;display:inline;}
+
+.editor_row2 ul li.fontsizeselect{float:left;display:inline;height:20px;padding:5px 0 0 0; width:50px}
+.editor_row2 ul li.fontselect {display:inline;height:18px;padding:5px 0 0 5px; width:110px; _width:115px;text-align:left;margin:0;text-indent}
+
+
+a.editor_img01,a:hover.editor_img01,a:visited.editor_img01 {float:left;width:60px;height:60px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:0 -517px}
+a.editor_img02,a:hover.editor_img02,a:visited.editor_img02 {float:left;width:60px;height:60px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-76px -517px}
+a.editor_img03,a:hover.editor_img03,a:visited.editor_img03 {float:left;margin-left:-5px;width:60px;height:60px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-150px -517px}
+a.editor_Cut {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:0 -93px}
+a:hover.editor_Cut {background:url(../image/editor/ico_pack.png) no-repeat;background-position:0 -121px}
+a:visited.editor_Cut {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:0 -93px}
+a.editor_Copy {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-30px -93px}
+a:hover.editor_Copy {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-30px -121px}
+a:visited.editor_Copy {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-30px -93px}
+a.editor_Paste {float:left;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-60px -93px}
+a:hover.editor_Paste {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-60px -121px}
+a:visited.editor_Paste {float:left;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-60px -93px}
+a.editor_Justifyleft {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-90px -93px}
+a:hover.editor_Justifyleft {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-90px -121px}
+a:visited.editor_Justifyleft {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-90px -93px}
+a.editor_Justifyleftsel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-90px -121px}
+a:hover.editor_Justifyleftsel {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-90px -121px}
+a:visited.editor_Justifyleftsel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-90px -121px}
+a.editor_Justifycenter {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-120px -93px}
+a:hover.editor_Justifycenter {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-120px -121px}
+a:visited.editor_Justifycenter  {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-120px -93px}
+a.editor_Justifycentersel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-120px -121px}
+a:hover.editor_Justifycentersel {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-120px -121px}
+a:visited.editor_Justifycentersel  {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-120px -121px}
+a.editor_Justifyright {float:left;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-150px -93px}
+a:hover.editor_Justifyright {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-150px -121px}
+a:visited.editor_Justifyright {float:left;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-150px -93px}
+a.editor_Justifyrightsel {float:left;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-150px -121px}
+a:hover.editor_Justifyrightsel {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-150px -121px}
+a:visited.editor_Justifyrightsel {float:left;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-150px -121px}
+a.editor_InsertUnorderedList {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-180px -93px}
+a:hover.editor_InsertUnorderedList {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-180px -121px}
+a:visited.editor_InsertUnorderedList {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-180px -93px}
+a.editor_InsertUnorderedListsel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-180px -121px}
+a:hover.editor_InsertUnorderedListsel {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-180px -121px}
+a:visited.editor_InsertUnorderedListsel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-180px -121px}
+a.editor_InsertOrderedList {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-210px -93px}
+a:hover.editor_InsertOrderedList {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-210px -121px}
+a:visited.editor_InsertOrderedList {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-210px -93px}
+a.editor_InsertOrderedListsel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-210px -121px}
+a:hover.editor_InsertOrderedListsel {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-210px -121px}
+a:visited.editor_InsertOrderedListsel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-210px -93px}
+a.editor_Outdent {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-240px -93px}
+a:hover.editor_Outdent {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-240px -121px}
+a:visited.editor_Outdent {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-240px -93px}
+a.editor_Indent {float:left;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-270px -93px}
+a:hover.editor_Indent {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-270px -121px}
+a:visited.editor_Indent {float:left;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-270px -93px}
+a.editor_CreateLink {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-300px -93px}
+a:hover.editor_CreateLink {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-300px -121px}
+a:visited.editor_CreateLink {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-300px -93px}
+a.editor_linktrace {float:left;margin-right:2px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-330px -93px}
+a:hover.editor_linktrace {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-330px -121px}
+a:visited.editor_linktrace {float:left;margin-right:2px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-330px -93px}
+a.editor_Bold {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:0 -152px}
+a:hover.editor_Bold {background:url(../image/editor/ico_pack.png) no-repeat;background-position:0 -180px}
+a:visited.editor_Bold {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:0 -152px}
+a.editor_Boldsel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:0 -180px}
+a:hover.editor_Boldsel {background:url(../image/editor/ico_pack.png) no-repeat;background-position:0 -180px}
+a:visited.editor_Boldsel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:0 -180px}
+a.editor_Italic {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-30px -152px}
+a:hover.editor_Italic {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-30px -180px}
+a:visited.editor_Italic {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-30px -152px}
+a.editor_Italicsel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-30px -180px}
+a:hover.editor_Italicsel {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-30px -180px}
+a:visited.editor_Italicsel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-30px -180px}
+a.editor_Underline {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-60px -152px}
+a:hover.editor_Underline {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-60px -180px}
+a:visited.editor_Underline {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-60px -152px}
+a.editor_Underlinesel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-60px -180px}
+a:hover.editor_Underlinesel {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-60px -180px}
+a:visited.editor_Underlinesel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-60px -180px}
+a.editor_Subscript {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-90px -152px}
+a:hover.editor_Subscript {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-90px -180px}
+a:visited.editor_Subscript {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-90px -152px}
+a.editor_Subscriptsel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-90px -180px}
+a:hover.editor_Subscriptsel {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-90px -180px}
+a:visited.editor_Subscriptsel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-90px -180px}
+a.editor_Superscript {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-120px -152px}
+a:hover.editor_Superscript {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-120px -180px}
+a:visited.editor_Superscript {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-120px -152px}
+a.editor_Superscriptsel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-120px -180px}
+a:hover.editor_Superscriptsel {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-120px -180px}
+a:visited.editor_Superscriptsel {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-120px -180px}
+a.editor_BackColor {float:left;margin-right:3px;width:46px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-150px -152px}
+a:hover.editor_BackColor {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-150px -180px}
+a:visited.editor_BackColor {float:left;margin-right:3px;width:46px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-150px -152px}
+a.editor_ForeColor {float:left;width:46px;height:25px;text-indent:-1000px;margin-right:3px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-199px -152px}
+a:hover.editor_ForeColor {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-199px -180px}
+a:visited.editor_ForeColor {margin-right:3px;float:left;width:46px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-199px -152px}
+a.editor_txt21 {float:left;margin:0 10px;width:45px;height:22px;padding-top:35px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:2px -333px;font-family:dotum,'맑은 고딕';font-size:11px;color:#004a80;}
+a:hover.editor_txt21 {float:left;margin:0 10px;width:45px;height:22px;padding-top:35px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:2px -333px;font-family:dotum,'맑은 고딕';font-size:11px;color:#004a80;}
+a:visited.editor_txt21 {float:left;margin:0 10px;width:45px;height:22px;padding-top:35px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:2px -333px;font-family:dotum,'맑은 고딕';font-size:11px;color:#004a80;}
+a.editor_txt22 {float:left;width:45px;margin:0 10px;height:22px;padding-top:35px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-49px -333px;font-family:dotum,'맑은 고딕';font-size:11px;color:#004a80;}
+a:hover.editor_txt22 {float:left;margin:0 10px;width:45px;height:22px;padding-top:35px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-49px -333px;font-family:dotum,'맑은 고딕';font-size:11px;color:#004a80;}
+a:visited.editor_txt22 {float:left;margin:0 10px;width:45px;height:22px;padding-top:35px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-49px -333px;font-family:dotum,'맑은 고딕';font-size:11px;color:#004a80;}
+
+a.editor_SpcChar {float:left;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-360px -93px;}
+a:hover.editor_SpcChar {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-360px -121px;}
+a:visited.editor_SpcChar {float:left;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-360px -93px;}
+
+a.editor_wegagent {float:left;margin-right:2px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:1px -271px;}
+a:hover.editor_wegagent {background:url(../image/editor/ico_pack.png) no-repeat;background-position:1px -301px;}
+a:visited.editor_wegagent {float:left;margin-right:2px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:1px -271px;}
+
+a.editor_filelink {float:left;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-116px -271px;}
+a:hover.editor_filelink {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-116px -301px;}
+a:visited.editor_filelink {float:left;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-116px -271px;}
+
+a.editor_upimage {float:left;width:27px;margin-right:5px; height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-350px -271px;}
+a:hover.editor_upimage {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-350px -301px;}
+a:visited.editor_upimage {float:left;width:27px;margin-right:5px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-350px -271px;}
+
+a.editor_InsertImage {float:left;width:27px;margin-left:5px;margin-right:5px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-390px -93px;}
+a:hover.editor_InsertImage {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-390px -121px;}
+a:visited.editor_InsertImage {float:left;margin-left:5px;width:27px;margin-right:5px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-390px -93px;}
+
+a.editor_InsertMulti {float:left;width:27px;margin-right:5px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-420px -93px;}
+a:hover.editor_InsertMulti {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-420px -121px;}
+a:visited.editor_InsertMulti {float:left;width:27px;margin-right:5px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-420px -93px;}
+
+a.editor_txt_img {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-390px -93px}
+a:hover.editor_txt_img {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-390px -121px}
+a:visited.editor_txt_img {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-390px -93px}
+
+a.editor_txt_mul {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-420px -93px}
+a:hover.editor_txt_mul {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-420px -121px}
+a:visited.editor_txt_mul {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-420px -93px}
+
+a.editor_txt_change {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-450px -93px}
+a:hover.editor_txt_change {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-450px -121px}
+a:visited.editor_txt_change {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-450px -93px}
+
+a.editor_txt_html {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-450px -149px}
+a:hover.editor_txt_html {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-450px -177px}
+a:visited.editor_txt_html {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-450px -149px}
+
+a.editor_table01 {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:0 -211px}
+a:hover.editor_table01 {background:url(../image/editor/ico_pack.png) no-repeat;background-position:0 -239px}
+a:visited.editor_table01 {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:0 -211px}
+a.editor_table02 {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-30px -211px}
+a:hover.editor_table02 {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-30px -239px}
+a:visited.editor_table02 {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-30px -211px}
+a.editor_table03 {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-60px -211px}
+a:hover.editor_table03 {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-60px -239px}
+a:visited.editor_table03 {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-60px -211px}
+a.editor_table04 {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-90px -211px}
+a:hover.editor_table04 {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-90px -239px}
+a:visited.editor_table04 {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-90px -211px}
+a.editor_table05 {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-120px -211px}
+a:hover.editor_table05 {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-120px -239px}
+a:visited.editor_table05 {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-120px -211px}
+a.editor_table06 {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-150px -211px}
+a:hover.editor_table06 {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-150px -239px}
+a:visited.editor_table06 {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-150px -211px}
+a.editor_table07 {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-180px -211px}
+a:hover.editor_table07 {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-180px -239px}
+a:visited.editor_table07 {float:left;margin-right:3px;width:27px;height:25px;text-indent:-1000px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-180px -211px}
+
+a.editor_option01 {float:left;margin-right:20px;height:21px;width:88px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:0 -274px;font-family:dotum,'맑은 고딕';font-size:11px;color:#256593;padding:4px 0 0 30px;}
+a:hover.editor_option01 {background:url(../image/editor/ico_pack.png) no-repeat;background-position:0 -304px;text-decoration:none;color:#004a80}
+a:visited.editor_option01 {float:left;margin-right:20px;height:21px;width:88px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:0 -274px;font-family:dotum,'맑은 고딕';font-size:11px;color:#256593;padding:4px 0 0 30px;}
+a.editor_option02 {float:left;margin-right:20px;height:21px;width:68px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-118px -274px;font-family:dotum,'맑은 고딕';font-size:11px;color:#256593;padding:4px 0 0 30px;}
+a:hover.editor_option02 {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-118px -304px;text-decoration:none;color:#004a80}
+a:visited.editor_option02 {float:left;margin-right:20px;height:21px;width:68px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-118px -274px;font-family:dotum,'맑은 고딕';font-size:11px;color:#256593;padding:4px 0 0 30px;}
+a.editor_option03 {float:left;margin-right:20px;height:21px;width:68px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-237px -274px;font-family:dotum,'맑은 고딕';font-size:11px;color:#256593;padding:4px 0 0 30px;}
+a:hover.editor_option03 {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-237px -304px;text-decoration:none;color:#004a80}
+a:visited.editor_option03 {float:left;margin-right:20px;height:21px;width:68px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-237px -274px;font-family:dotum,'맑은 고딕';font-size:11px;color:#256593;padding:4px 0 0 30px;}
+a.editor_option04 {float:left;margin-right:20px;height:21px;width:88px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-354px -274px;font-family:dotum,'맑은 고딕';font-size:11px;color:#256593;padding:4px 0 0 30px;}
+a:hover.editor_option04 {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-354px -304px;text-decoration:none;color:#004a80}
+a:visited.editor_option04 {float:left;margin-right:20px;height:21px;width:88px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-354px -274px;font-family:dotum,'맑은 고딕';font-size:11px;color:#256593;padding:4px 0 0 30px;}
+a.editor_option05 {float:left;margin-right:20px;height:21px;width:68px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-475px -274px;font-family:dotum,'맑은 고딕';font-size:11px;color:#256593;padding:4px 0 0 30px;}
+a:hover.editor_option05 {background:url(../image/editor/ico_pack.png) no-repeat;background-position:-475px -304px;text-decoration:none;color:#004a80}
+a:visited.editor_option05 {float:left;margin-right:20px;height:21px;width:68px;background:url(../image/editor/ico_pack.png) no-repeat;background-position:-475px -274px;font-family:dotum,'맑은 고딕';font-size:11px;color:#256593;padding:4px 0 0 30px;}
+
+
+/* editor selectbox 2012.12.07*/
+.select3{ position:relative; float:left;display:inline-block; *display:inline; background:#ffffff; line-height:normal; vertical-align:middle; *zoom:1;margin-right:3px}
+.select3 *{ margin:0; padding:0; font-size:12px; font-family:"굴림", Gulim; cursor:pointer}
+.select3 .my_value{ overflow:visible; position:relative; top:0; left:0; border:1px solid #9bbdd1; background:transparent; color:#9bbdd1; text-align:left; line-height:25px;.line-height:15px;}
+.select3 .my_value.selected{ font-weight:bold}
+.select3.open .my_value, .select3 .my_value.outLine{ border:1px solid #9bbdd1}
+.select3 button.my_value{ width:100%; height:25px; *padding-left:5px; text-indent:5px; *text-indent:0}
+.select3 div.my_value{ height:25px; text-indent:8px}
+.select3 .ctrl{ position:absolute; top:0; right:0; width:25px; height:25px;}
+.select3 .arrow{ position:absolute; width:0; height:0; top:10px; right:10px; border-top:4px solid #5384a3; border-left:4px solid #fff; border-right:4px solid #fff; font-size:0; line-height:0}
+.select3 ul{overflow:visible; position:absolute; top:22px; left:0;width:100%; border:0; border-top:1px solid #94b9cf; border-bottom:1px solid #94b9cf; background:#fff; list-style:none}
+.select3 ul.a_list{display:none}
+.select3.open ul.a_list{display:block;}
+.select3 li{overflow:visible;position:relative; height:20px;display:block; border-left:1px solid #94b9cf;border-right:1px solid #94b9cf; white-space:nowrap}
+.select3 li input.option{ position:absolute; width:100%; height:20px; line-height:20px}
+.select3 li label{ position:absolute; top:0; left:0; width:100%; height:20px; background:#fff; color:#5384a3; line-height:20px; text-indent:8px; *text-indent:6px}
+.select3 li a{ display:block; height:20px;  color:#5384a3; line-height:20px;  text-decoration:none}
+.select3 li.hover *{ background:#a8c7d9; color:#fff}
+
+.select4{ position:relative; float:left;display:inline-block; *display:inline; background:#ffffff; line-height:normal; vertical-align:middle; *zoom:1;margin-right:3px}
+.select4 *{ margin:0; padding:0; font-size:12px; font-family:"굴림", Gulim; cursor:pointer}
+.select4 .my_value{ overflow:visible; position:relative; top:0; left:0; border:1px solid #9bbdd1; background:transparent; color:#9bbdd1; text-align:left; line-height:25px;.line-height:15px;}
+.select4 .my_value.selected{ font-weight:bold}
+.select4.open .my_value, .select4 .my_value.outLine{ border:1px solid #9bbdd1}
+.select4 button.my_value{ width:100%; height:25px; *padding-left:5px; text-indent:5px; *text-indent:0}
+.select4 div.my_value{ height:25px; text-indent:8px}
+.select4 .ctrl{ position:absolute; top:0; right:0; width:25px; height:25px;}
+.select4 .arrow{ position:absolute; width:0; height:0; top:10px; right:10px; border-top:4px solid #5384a3; border-left:4px solid #fff; border-right:4px solid #fff; font-size:0; line-height:0}
+.select4 ul{overflow:visible; position:absolute; top:22px; left:0;width:100%; border:0; border-top:1px solid #94b9cf; border-bottom:1px solid #94b9cf; background:#fff; list-style:none}
+.select4 ul.a_list{display:none}
+.select4.open ul.a_list{display:block;}
+.select4 li{overflow:visible;position:relative; height:20px;display:block; border-left:1px solid #94b9cf;border-right:1px solid #94b9cf; white-space:nowrap}
+.select4 li input.option{ position:absolute; width:100%; height:20px; line-height:20px}
+.select4 li label{ position:absolute; top:0; left:0; width:100%; height:20px; background:#fff; color:#5384a3; line-height:20px; text-indent:8px; *text-indent:6px}
+.select4 li a{ display:block; height:20px;  color:#5384a3; line-height:20px;  text-decoration:none}
+.select4 li.hover *{ background:#a8c7d9; color:#fff}
+
+.tableTrans {float:left; width:100%; height:280}
+.tableTrans thead th {height:30px;padding:0;border-top:1px solid #dfdfdf;border-bottom:1px solid #dfdfdf;font-size:12px;text-align:center;color:#6a6a6a;font-weight:bold;background:url(../img/common/table_title_bg.gif) repeat-x; vertical-align:middle;}
+.tableTrans thead th.first {border-left:1px solid #dfdfdf}
+.tableTrans thead th.end {border-right:1px solid #dfdfdf}
+.tableTrans thead th.title {color:#6a6a6a !important;font-weight:bold !important;}
+.tableTrans thead th.one {border:1px solid #dfdfdf;text-align:left;color:#76b4d3;font-weight:normal;padding-left:10px;}
+.tableTrans thead th.right {text-align:right;padding-right:14px;.padding-right:10px;}
+.tableTrans tbody td.head {padding:3px 0;margin:0;border:1px solid #dfdfdf;border-collapse:collapse;font-size:12px;text-align:center;color:#6a6a6a;font-weight:bold;background:url(../img/common/table_title_bg.gif) repeat-x; vertical-align:middle;}
+body:first-of-type .tableTrans tbody td.head {height:30px; padding:0}
+.tableTrans tbody td {border:1px solid #dfdfdf;border-collapse:collapse;padding:6px 14px;font-size:12px;text-align:left;color:#6c6c6c;background-color:#ffffff;}
+.tableTrans tbody td.center{text-align:center;}
+.tableTrans tbody td.center2{text-align:center;padding:20px 0}
+.tableTrans tbody td.right {text-align:right;}
+.tableTrans tbody td.top {vertical-align:top;}
+.tableTrans tbody td.r_none {border-right:1px solid #ffffff !important;}
+.tableTrans tbody td.rb_none {border-right:1px solid #ffffff !important;border-bottom:1px solid #ffffff !important;}   /*2013.01.11 추가 */
+.tableTrans tbody td.lb_none {border-left:1px solid #ffffff !important;border-bottom:1px solid #ffffff !important;}      /*2013.01.11 추가 */
+.tableTrans tbody td.pd_0 {padding:0;}
+.tableTrans tbody td.gray {border:1px solid #cccccc !important;}
+
+.mg_t1 {margin-top:0px;.margin-top:-1px;}
+
+ 

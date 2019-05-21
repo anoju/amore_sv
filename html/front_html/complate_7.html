@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>Amorepacific Beautypoint</title>
+	<link rel="stylesheet" type="text/css" href="../common/css/mobile/animate.css">
+	<link rel="stylesheet" type="text/css" href="../common/css/mobile/front.css">
+</head>
+
+<body>
+	<!-- Contents -->
+	<div class="sv_survey_wrap">
+		<div class="sv_inner">
+			<div class="sv_today_score">
+				<dl class="info">
+					<dt>오늘의 설문</dt>
+					<dd>10/20개</dd>
+				</dl>
+				<div class="sv_graph">
+					<div class="line">
+						<div class="bar" style="width:10%;"></div>
+						<div class="mark"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="sv_hr">
+		<div class="sv_inner">
+			<dl class="sv_survey">
+				<dt>귀하께서는 다음의 품목을 얼마나 자주 사용하십니까?</dt>
+				<dd>
+					<div class="sv_check_tit">기초화장품</div>
+					<div class="sv_check_item_wrap">
+						<label class="sv_check_item">
+							<input type="radio" name="radio" id="">
+							<div class="lbl">
+								<div>매일</div>
+							</div>
+						</label>
+						<label class="sv_check_item">
+							<input type="radio" name="radio" id="">
+							<div class="lbl">
+								<div>일주일에 5일</div>
+							</div>
+						</label>
+						<label class="sv_check_item">
+							<input type="radio" name="radio" id="">
+							<div class="lbl">
+								<div>일주일에 2일</div>
+							</div>
+						</label>
+					</div>
+
+					<div class="sv_check_tit">색조화장품</div>
+					<div class="sv_check_item_wrap">
+						<label class="sv_check_item">
+							<input type="radio" name="radio2" id="">
+							<div class="lbl">
+								<div>매일</div>
+							</div>
+						</label>
+						<label class="sv_check_item">
+							<input type="radio" name="radio2" id="">
+							<div class="lbl">
+								<div>일주일에 5일</div>
+							</div>
+						</label>
+						<label class="sv_check_item">
+							<input type="radio" name="radio2" id="">
+							<div class="lbl">
+								<div>일주일에 2일</div>
+							</div>
+						</label>
+					</div>
+				</dd>
+			</dl>
+		</div>
+		<div class="btn_wrap fixed">
+			<span><a href="#" class="sv_button blue">다음</a></span>
+		</div>
+	</div>
+	<!-- //Contents -->
+
+	<!-- 완료 팝업 -->
+	<div id="popup7" class="sv_popup_wrap">
+		<div class="sv_popup">
+			<div class="sv_popup_cont">
+				<div class="sv_popup_visual">
+					<div class="confetti type6"></div>
+					<img src="../common/image/survey/sv_popup_visual_img7.png" alt="heart letter">
+				</div>
+				<div class="sv_popup_tit">고마워요!</div>
+				<div class="sv_popup_txt">응답해주신 의견은 서비스<br>개선에 큰 힘이 된답니다.</div>
+			</div>
+		</div>
+	</div>
+	<!-- //완료 팝업 -->
+
+	<script src="../common/js/jquery-1.9.1.min.js"></script>
+	<script src="../common/js/ui-front.js"></script>
+	<script>
+		svPopOpen('#popup7');			//팝업 오픈함수(아이디 임의 설정, 팝업 아이디 변경가능)
+		//complateEffect('.confetti',10);	//인터렉션 함수
+		setTimeout(function(){			//임시 3초후 닫기(SB상으로 팝업닫기 후 다음질문으로)
+			//svPopClose('#popup7');		//팝업 닫기함수
+		},3000);
+	</script>
+</body>
+</html>

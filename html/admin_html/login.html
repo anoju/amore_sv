@@ -1,0 +1,107 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"> 
+	<META NAME="GOOGLEBOT" CONTENT="NOSNIPPET"> 
+	<META NAME="ROBOTS" CONTENT="NOARCHIVE">
+	
+	<title>AmorePacific Survey</title>
+	
+	<link rel="stylesheet" type="text/css" href="../common/css/login.css"><!-- 수정 : amore -->
+	<link rel="stylesheet" type="text/css" href="../common/css/default.css">
+	<link rel="shortcut icon" href="../common/image/favicon.ico">
+	<script language="JavaScript" type="text/JavaScript" src="../common/js/login.js"></script>
+	<script language="JavaScript" type="text/JavaScript" src="../common/js/sha256.js"></script>
+	<script language="JavaScript">
+	<!--
+	function jsLogin() 
+	{
+		var obj = document.form;
+		if(obj.id.value == '') {
+			alert ("아이디를 입력하여 주십시오.");
+			obj.id.focus();
+			return ;
+		} else if(obj.pw.value == '') {
+			alert("패스워드를 입력하여 주십시오.");
+			obj.pw.focus();	
+			return ;
+		}
+		document.form_1.parm.value = convertParam(obj.id.value,hex_sha256(obj.pw.value));
+		obj.id.value ='';
+		obj.pw.value = '';
+		
+		document.form_1.submit();
+	}
+	
+	function jsLoginCheck(evt) 
+	{
+		var e = (window.event) ? window.event : evt;
+		if(e.keyCode==13){
+			  jsLogin();
+		  }
+	}
+	
+	function checkFocus() 
+	{
+		var obj = document.form;
+		obj.id.focus();
+	}
+	
+	
+	window.onload=checkFocus
+	
+	//-->		
+	</script>
+	</head>
+	
+	<body class="Mblue">
+	<form name="form_1" action="loginCtl.jsp" method="post">
+	<input type="hidden" name="parm">
+	</form>
+	<form name="form" method="post" onSubmit="return false;">
+	
+	<!-- header : s -->
+	<div id="headerWr">
+	
+		<!-- LOGO : s -->
+		<h2><img src="../common/image/amore/login_logo.png" alt="아모레 퍼시픽"></h2><!-- 수정 : amore -->
+		<!-- LOGO : e -->
+		
+		<!-- 로그인, 비쥬얼 : s -->
+		<table border="0" align="center" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td align="right"><table width="475" border="0" cellpadding="0" cellspacing="0">
+			  <tr>
+				<td><img src="../common/image/login.gif"/></td>
+			  </tr>
+			  <tr>
+				<td height="50"></td>
+			  </tr>
+			  <tr>
+				<td>
+				<table border="0" cellspacing="0" cellpadding="0">
+				  <tr>
+					<td width="70"><strong>아이디</strong></td>
+					<td width="250"><input type="text" name="id" id="user_name2" class="login_id" onKeyDown="javascript:jsLoginCheck(event);" tabindex="1" value=""></td>
+					<td width="120" rowspan="3" align="left" valign="top"><a href='javascript:jsLogin();' ><img src="../common/image/btn_login.gif" alt="Login" /></a></td>
+				  </tr>
+				  <tr>
+					<td><strong>패스워드</strong></td>
+					<td><input type="password"  value="" name="pw" id="password2" style="margin:10px 0;" class="login_pw" onKeyDown="javascript:jsLoginCheck(event);" tabindex="2" autocomplete ="off"></td>
+				  </tr>
+				</table></td>
+			  </tr>
+			</table></td>
+			<td align="left" valign="top" width="500" height="346"></td><!-- 수정 : amore -->
+		  </tr>
+		</table>
+		<div class="bg_visual"></div><!-- 추가 : amore -->
+		<!-- 로그인, 비쥬얼 : s -->
+	</div>
+	<!-- header : e -->
+	
+	</form>
+	</body>
+	</html>

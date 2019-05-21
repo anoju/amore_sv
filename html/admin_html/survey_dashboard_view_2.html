@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BIZenic8 Demo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=EmulateIE9,chrome=1" />
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW"> 
+<meta name="GOOGLEBOT" content="NOSNIPPET"> 
+<meta name="ROBOTS" v="NOARCHIVE"> 
+
+<link rel="stylesheet" type="text/css" href="../common/css/color_blue.css">
+<link rel="stylesheet" type="text/css" href="../common/css/default.css">
+
+<link rel="shortcut icon" href="../common/image/favicon.ico">
+<script language="JavaScript" type="text/JavaScript" src="../common/js/bizenic.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/jquery-1.9.1.min.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/validator.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/date_picker.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/message/message_ko.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/imgOperate.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/common_main.js"></script>
+<script type="text/javascript" src="../common/js/respond.js"></script>
+<script src="../common/js/chart_JUI/core_160327.js"></script>
+<script src="../common/js/chart_JUI/chart_160327.js"></script>
+
+<!-- 추가 css,js -->
+<link rel="stylesheet" type="text/css" href="../common/css/select2.min.css">
+<link rel="stylesheet" type="text/css" href="../common/css/amore.css">
+<script type="text/javascript" src="../common/js/select2.min.js"></script>
+<script type="text/javascript" src="../common/js/amore.js"></script>
+<!-- //추가 css,js -->
+</head>
+<body>
+<!-- wrap : s -->
+<div id="wrap">
+	<!-- header : s -->
+	<div id="headerWr">
+		<div class="topWrap">
+			<div class="header">
+				<!-- LOGO : s 세로사이즈는 26px 가로사이즈는 180px을 넘지 않는다.-->
+				<h1><a href="#"><img src="../common/image/amore/logo.png" alt="아모레 퍼시픽"></a></h1>
+				<!-- LOGO : e 세로사이즈는 26px 가로사이즈는 180px을 넘지 않는다.-->
+				
+				<!-- 로그아웃, 나의정보, 메뉴얼 : s -->
+				<div class="snb">
+					<ul class="etc_img">
+						<li><a href="../logoutCtl.jsp?sessID=223_38_23_129542_0"><img src="../common/image/btn_logout_ko_blue.gif" /></a></li>
+						<li><a href="javascript:jsMyinfo()"><img src="../common/image/btn_myinfo_ko_blue.gif"/></a></li>
+					</ul>
+				</div>
+				<!-- 로그아웃, 나의정보, 메뉴얼 : e -->
+				<!------------------------------	탑메뉴 시작 ------------------------------------------>	 
+				<!-- gnb : s -->		 
+				<div class="gnb">
+					<ul>
+						<li>
+							<a href="#">설문 관리</a>
+							<!-- 2depth : s -->
+							<div class="depth2" >
+								<ul>
+									<li><a href="#">설문지</a></li>
+									<li><a href="#">설문진행</a></li>
+									<li><a href="#">설문스킨</a></li>
+									<li><a href="#">설문분석</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">설문 대시보드</a>
+							<!-- 2depth : s -->
+							<div class="depth2" >
+								<ul>
+									<li><a href="#">설문 대시보드</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">응답자 대시보드</a>
+							<!-- 2depth : s -->
+							<div class="depth2" >
+								<ul>
+									<li><a href="#">응답자 개요</a></li>
+									<li><a href="#">일별 참여 현황</a></li>
+									<li><a href="#">응답자별 참여 현황</a></li>
+									<li><a href="#">응답자 조회</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">솔루션</a>
+							<!-- 2depth : s -->
+							<div class="depth2" >
+								<ul>
+									<li><a href="#">사용자</a></li>
+									<li><a href="#">DB 연결정보</a></li>
+									<li><a href="#">트리</a></li>
+									<li><a href="#">공지사항</a></li>
+									<li><a href="#">로그인</a></li>
+									<li><a href="#">개인정보로그</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">시스템</a>
+						</li>
+					</ul>
+				</div>
+			<!-- gnb : e -->
+			<!------------------------------	탑메뉴 끝------------------------------------------>
+			</div>
+		</div>
+		<!-- header : e -->
+		<div id="container">
+		</div>
+	</div>
+</div>
+<!-- wrap : e -->
+<!-- contents : s -->
+<div id="content">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<th colspan="2" align="left" valign="top">
+				<!-------------------------------------	현재 위치맵	----------------------------------------------->
+				<div id="Rcon">
+					<div class="location">
+						<span><a href="#">설문 대시보드</a></span><strong>설문 대시보드</strong>
+					</div>
+				</div>
+				<!-------------------------------------	현재 위치맵 끝 ----------------------------------------------->
+			</th>
+		</tr>
+		<tr>
+			<td align="left" valign="top">
+				<!-------------------------------------	현재 큰 타이틀	----------------------------------------------->
+				<div id="Rcon">
+					<div class="title">대시보드 설문 문항 검색</div>
+				</div>
+				<!-------------------------------------	현재 큰 타이틀 끝 ----------------------------------------------->
+			</td>
+			<td align="right" valign="top">
+				<!-- <div id="Rcon">
+					<div class="admin">아모레퍼시픽 님이 로그인 하셨습니다.
+						<a href="javascript:jsUserLang('ko')"><img src="../../../common/image/lan_ko_on.gif"></a><a href="javascript:jsUserLang('en')"><img src="../../../common/image/lan_en.gif"></a><a href="javascript:jsUserLang('jp')"><img src="../../../common/image/lan_jp.gif"></a><a href="javascript:jsUserLang('cn')"><img src="../../../common/image/lan_cn.gif"></a>
+					</div>
+				</div> -->
+			</td>
+		</tr>
+	</table>
+
+	<!--컨텐츠 시작 -->
+	<div class="am_view">
+		<h2 class="title first">귀하의 나이가 어떻게 되십니까?</h2>
+		<div class="title_sub">Personal Info &gt; 개인정보</div>
+
+		<div class="am_container">
+			<div class="am_cont_top">
+				<table class="am_table">
+					<colgroup>
+						<col width="15%">
+						<col width="35%">
+						<col width="15%">
+						<col width="35%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">총 설문 응답 수</th><!-- 2019-05-20: 텍스트 수정-->
+							<td>12,100</td>
+							<th scope="row">즐겨찾기 설정</th>
+							<td>
+								<button class="btn_favorite">즐겨찾기</button>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">그래프형</th>
+							<td>
+								<select class="am_select">
+									<option value="">막대형</option>
+									<option value="">꺽은선형</option>
+									<option value="">원형</option>
+								</select>
+							</td>
+							<th scope="row">노출값</th>
+							<td scope="row">
+								<label class="am_radio">
+									<input type="radio" name="radio1" id="" checked>
+									<span class="lbl">비중</span>
+								</label>
+								<label class="am_radio">
+									<input type="radio" name="radio1" id="">
+									<span class="lbl">응답지수</span>
+								</label>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="am_chart_box">
+				<div class="am_inner">
+					<div class="am_filter_info">
+						<dl>
+							<dt>필터</dt>
+							<dd>
+								<ul class="am_filter_list">
+									<li>
+										<span>기간</span>
+										<div class="select_item_wrap">
+											<div class="select_item">19.01.01 ~ 19.03.06<button class="btn_del">삭제</button></div>
+										</div>
+									</li>
+									<li>
+										<span>옵션값</span>
+										<div class="select_item_wrap">
+											<div class="select_item">성별 - 여<button class="btn_del">삭제</button></div>
+											<div class="select_item">거주지역 - 서울<button class="btn_del">삭제</button></div>
+											<div class="select_item">거주지역 - 인천<button class="btn_del">삭제</button></div>
+											<div class="select_item">피부밝기 - 21호<button class="btn_del">삭제</button></div>
+											<div class="select_item">피부타입 - 민감성<button class="btn_del">삭제</button></div>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt>그룹</dt>
+							<dd>
+								<ul class="am_filter_list">
+									<li>
+										<span>문항교차</span>
+										<div class="select_item_wrap">
+											<div class="select_item">귀하는 평소 스킨로션을 바르십니까?<button class="btn_del">삭제</button></div>
+										</div>
+									</li>
+									<li>
+										<span>옵션교차</span>
+										<div class="select_item_wrap">
+											<div class="select_item">뷰티 레벨 2-4<button class="btn_del">삭제</button></div>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div class="am_btn_area right">
+						<a href="#" class="am_btn h40 round line">필터 초기화</a>
+					</div>
+					<!-- 차트영역(디자인 확인용으로 코딩상 2개지만 1개만 노출 합니다.) : 임시 이미지 삽입, .am_chart > div에 차트 사입-->
+					<div class="am_chart">
+						<div><img src="../common/image/amore/@chart2.png" alt="임시 도넛 차트"></div>
+					</div>
+					<div class="am_chart">
+						<div><img src="../common/image/amore/@chart3.png" alt="임시 다중 막대 차트"></div>
+					</div>
+					<!-- //차트영역 -->
+					
+					<p class="am_title">전체</p>
+					<div class="am_table_wrap">
+						<table class="am_table2">
+							<colgroup>
+								<col width="33%">
+								<col width="33%">
+								<col width="33%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">설문 응답 항목</th>
+									<th scope="col">비중(%)</th>
+									<th scope="col">응답자 수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>10대</td>
+									<td>18%</td>
+									<td>2,178</td>
+								</tr>
+								<tr>
+									<td>20대</td>
+									<td>40%</td>
+									<td>4,840</td>
+								</tr>
+								<tr>
+									<td>30대</td>
+									<td>22%</td>
+									<td>2,662</td>
+								</tr>
+								<tr>
+									<td>40대</td>
+									<td>16%</td>
+									<td>1,936</td>
+								</tr>
+								<tr>
+									<td>50대 이상</td>
+									<td>4%</td>
+									<td>484</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p class="am_title">필터 적용 (설문 응답 수: 850)</p>
+					<div class="am_table_wrap">
+						<table class="am_table2">
+							<colgroup>
+								<col width="33%">
+								<col width="33%">
+								<col width="33%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">설문 응답 항목</th>
+									<th scope="col">비중(%)</th>
+									<th scope="col">응답자 수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>10대</td>
+									<td>18%</td>
+									<td>2,178</td>
+								</tr>
+								<tr>
+									<td>20대</td>
+									<td>40%</td>
+									<td>4,840</td>
+								</tr>
+								<tr>
+									<td>30대</td>
+									<td>22%</td>
+									<td>2,662</td>
+								</tr>
+								<tr>
+									<td>40대</td>
+									<td>16%</td>
+									<td>1,936</td>
+								</tr>
+								<tr>
+									<td>50대 이상</td>
+									<td>4%</td>
+									<td>484</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p class="am_title">필터 및 교차 적용 (설문 응답 수: 850)</p>
+					<div class="am_table_wrap">
+						<table class="am_table2">
+							<colgroup>
+								<col width="14%">
+								<col width="14%">
+								<col width="14%">
+								<col width="14%">
+								<col width="14%">
+								<col width="14%">
+								<col width="14%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" rowspan="2">설문 응답 항목</th>
+									<th scope="colgroup" colspan="2">노란톤(비중(%))</th>
+									<th scope="colgroup" colspan="2">붉은톤(비중(%))</th>
+									<th scope="colgroup" colspan="2">보통(비중(%))</th>
+								</tr>
+								<tr>
+									<th scope="col">비중(%)</th>
+									<th scope="col">응답자 수</th>
+									<th scope="col">비중(%)</th>
+									<th scope="col">응답자 수</th>
+									<th scope="col">비중(%)</th>
+									<th scope="col">응답자 수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>10대</td>
+									<td>4%</td>
+									<td>1,210</td>
+									<td>3%</td>
+									<td>1,210</td>
+									<td>3%</td>
+									<td>1,210</td>
+								</tr>
+								<tr>
+									<td>20대</td>
+									<td>8%</td>
+									<td>100</td>
+									<td>12%</td>
+									<td>100</td>
+									<td>12%</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td>30대</td>
+									<td>6%</td>
+									<td>200</td>
+									<td>6%</td>
+									<td>200</td>
+									<td>6%</td>
+									<td>200</td>
+								</tr>
+								<tr>
+									<td>40대</td>
+									<td>3%</td>
+									<td>20</td>
+									<td>3%</td>
+									<td>20</td>
+									<td>3%</td>
+									<td>20</td>
+								</tr>
+								<tr>
+									<td>50대 이상</td>
+									<td>1%</td>
+									<td>10</td>
+									<td>1%</td>
+									<td>10</td>
+									<td>1%</td>
+									<td>10</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p class="am_title">그룹 적용 (설문 응답 수: 850)</p>
+					<div class="am_table_wrap">
+						<table class="am_table2">
+							<colgroup>
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" rowspan="2">설문 응답 항목</th>
+									<th scope="colgroup" colspan="2">있다(비중(%))</th>
+									<th scope="colgroup" colspan="2">없다(비중(%))</th>
+								</tr>
+								<tr>
+									<th scope="col">비중(%)</th>
+									<th scope="col">응답자 수</th>
+									<th scope="col">비중(%)</th>
+									<th scope="col">응답자 수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>10대</td>
+									<td>4%</td>
+									<td>1,210</td>
+									<td>3%</td>
+									<td>1,210</td>
+								</tr>
+								<tr>
+									<td>20대</td>
+									<td>8%</td>
+									<td>100</td>
+									<td>12%</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td>30대</td>
+									<td>6%</td>
+									<td>200</td>
+									<td>6%</td>
+									<td>200</td>
+								</tr>
+								<tr>
+									<td>40대</td>
+									<td>3%</td>
+									<td>20</td>
+									<td>3%</td>
+									<td>20</td>
+								</tr>
+								<tr>
+									<td>50대 이상</td>
+									<td>1%</td>
+									<td>10</td>
+									<td>1%</td>
+									<td>10</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="am_btn_area right">
+						<a href="#" class="am_btn h40 round line">Excel 저장</a>
+					</div>
+				</div>
+			</div>
+			<div class="am_btn_area">
+				<a href="#" class="am_btn h40 blue btn_in_icon"><i class="ic_list"></i>목록</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="am_util">
+		<div class="am_util_btn">
+			<a href="#" class="am_btn h40 gray btn_in_icon"><i class="ic_pdf"></i>가이드 다운로드</a>
+			<a href="#" class="am_btn h40 gray btn_in_icon btn_my_favorite"><i class="ic_bookmark"></i>내 즐겨찾기</a>
+		</div>
+
+		<div class="am_filter">
+			<a href="#" class="am_btn h40 blue btn_in_icon btn_in_arr "><i class="ic_chart"></i>필터설정, 교차분석
+				<div class="am_tip_wrap"><i class="am_tip">?</i><div class="am_tip_cont right">필터설정, 교차분석을 설정할 수 있습니다.</div></div>
+			</a>
+			<div class="am_filter_cont">
+				<div class="am_filter_tab">
+					<a href="#filter1" class="am_btn round line on">필터설정 
+						<div class="am_tip_wrap"><i class="am_tip">?</i><div class="am_tip_cont right">기간, 각각의 옵션을 선택하여 필터를 설정할 수 있습니다.</div></div>
+					</a>
+					<a href="#filter2" class="am_btn round line">교차분석
+						<div class="am_tip_wrap"><i class="am_tip">?</i><div class="am_tip_cont right">문항과 문항, 문항과 옵션에 대하여 교차분석 할 수 있습니다.</div></div>
+					</a>
+				</div>
+				<div id="filter1" class="am_filter_box on">
+					<p class="am_filter_tit">1. 기간 선택하기</p>
+					<div class="am_input_date">
+						<input type="text" id="dp_start" name="start_dt" class="am_input datepicker" readonly>
+						<span>~</span>
+						<input type="text" id="dp_end" name="end_dt" class="am_input datepicker" readonly>
+					</div>
+					<div class="am_filter_txt">※ 미 선택 시, 문항 생성일부터 현재 일자로 적용됩니다.</div>
+					<p class="am_filter_tit">2. 옵션 선택하기</p>
+					<select name="" id="" class="am_select" style="width:100%">
+						<option value="">성별</option>
+						<option value="">연령대</option>
+						<option value="">피부타입</option>
+						<option value="">피부밝기</option>
+						<option value="">피부톤</option>
+						<option value="">피부고민</option>
+						<option value="">뷰티레벨</option>
+						<option value="">직업</option>
+						<option value="" selected>거주지역</option>
+						<option value="">자녀여부</option>
+						<option value="">관심사</option>
+					</select>
+					<div class="am_filter_box2">
+						<div>
+							<label class="am_checkbox">
+								<input type="checkbox" name="chkOpt" id="">
+								<span class="lbl">서울</span>
+							</label>
+							<label class="am_checkbox">
+								<input type="checkbox" name="chkOpt" id="">
+								<span class="lbl">인천</span>
+							</label>
+							<label class="am_checkbox">
+								<input type="checkbox" name="chkOpt" id="">
+								<span class="lbl">경기도</span>
+							</label>
+							<label class="am_checkbox">
+								<input type="checkbox" name="chkOpt" id="">
+								<span class="lbl">부산</span>
+							</label>
+							<label class="am_checkbox">
+								<input type="checkbox" name="chkOpt" id="">
+								<span class="lbl">울산</span>
+							</label>
+							<label class="am_checkbox">
+								<input type="checkbox" name="chkOpt" id="">
+								<span class="lbl">강원도</span>
+							</label>
+							<label class="am_checkbox">
+								<input type="checkbox" name="chkOpt" id="">
+								<span class="lbl">충청북도</span>
+							</label>
+							<label class="am_checkbox">
+								<input type="checkbox" name="chkOpt" id="">
+								<span class="lbl">전라남도</span>
+							</label>
+							<label class="am_checkbox">
+								<input type="checkbox" name="chkOpt" id="">
+								<span class="lbl">전라북도</span>
+							</label>
+							<label class="am_checkbox">
+								<input type="checkbox" name="chkOpt" id="">
+								<span class="lbl">광주</span>
+							</label>
+							<label class="am_checkbox">
+								<input type="checkbox" name="chkOpt" id="">
+								<span class="lbl">충청남도</span>
+							</label>
+							<label class="am_checkbox">
+								<input type="checkbox" name="chkOpt" id="">
+								<span class="lbl">대구</span>
+							</label>
+						</div>
+					</div>
+					<div class="am_filter_txt">※ 적용할 필터 옵션값을 선택하세요.</div>
+					<div class="am_filter_arr"></div>
+					<div class="am_filter_box2 type2">
+						<p class="am_filter_tit">※ 적용 필터 옵션 값</p>
+						<div class="select_item_wrap type2">
+							<div class="select_item">기간 - 19.01.01 ~ 19.03.06<button class="btn_del">삭제</button></div>
+							<div class="select_item">성별 - 여<button class="btn_del">삭제</button></div>
+							<div class="select_item">거주지역 - 서울<button class="btn_del">삭제</button></div>
+							<div class="select_item">거주지역 - 인천<button class="btn_del">삭제</button></div>
+							<div class="select_item">피부밝기 - 21호<button class="btn_del">삭제</button></div>
+							<div class="select_item">피부타입 - 민감성<button class="btn_del">삭제</button></div>
+						</div>
+						<div class="am_btn_area">
+							<a href="#" class="am_btn h40 round blue">적용하기 </a>
+						</div>
+					</div>
+				</div>
+				<div id="filter2" class="am_filter_box">
+					<div class="am_tabmenu ui-tabmenu">
+						<ul>
+							<li class="on"><a href="#filterTab1">문항교차</a></li>
+							<li><a href="#filterTab2">옵션교차</a></li>
+						</ul>
+					</div>
+					<div id="filterTab1" class="tab_cont on">
+						<input type="text" class="am_input search" placeholder="검색어를 입력해 주세요.">
+						<div class="list_option">
+							<select class="am_select" title="정렬기준">
+								<option value="">응답자 많은 순</option>
+							</select>
+							<select class="am_select" title="리스트 노출 갯수">
+								<option value="">10개 보기</option>
+								<option value="">20개 보기</option>
+								<option value="">50개 보기</option>
+								<option value="">100개 보기</option>
+							</select>
+						</div>
+						<div class="am_ft_qa">
+							<div class="am_qa_list small">
+								<ul>
+									<li>
+										<a href="#" class="cont">
+											<div class="tit">귀하의 나이가 어떻게 되십니까?</div>
+											<div class="info">Personal Info &gt; 개인정보</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="cont">
+											<div class="tit">귀하께서 현재 거주하고 계신 지역은 어디입니까? </div>
+											<div class="info">Personal Info &gt; 개인정보</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="cont">
+											<div class="tit">귀댁의 월평균 가구 소득[미국은 연평균 가구 소득으로 질문]은 어느 정도입니까?보너스, 이자소득, 가구 구성원 소득을 모두 포함해 말씀해주십시오.</div>
+											<div class="info">Personal Info &gt; 개인정보</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="cont">
+											<div class="tit">귀하의 나이가 어떻게 되십니까?</div>
+											<div class="info">Personal Info &gt; 개인정보</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="cont">
+											<div class="tit">귀하의 현재 결혼 상태는?</div>
+											<div class="info">Personal Info &gt; 개인정보</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="am_pagination">
+								<span><img src="../common/image/amore/page_first.png" alt="첫페이지"></span>
+								<span><img src="../common/image/amore/page_prev.png" alt="이전페이지"></span>
+								<b>1</b>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<a href="#"><img src="../common/image/amore/page_next.png" alt="다음페이지"></a>
+								<a href="#"><img src="../common/image/amore/page_last.png"  alt="마지막페이지"></a>
+							</div>
+						</div>
+					</div>
+					<div id="filterTab2" class="tab_cont">
+						<div class="am_filter_txt">※ 적용하시는 옵션교차는 한 개의 조건 값 선택이 가능합니다.</div>
+						<br>
+						<select name="" id="" class="am_select" style="width:100%">
+							<option value="">성별</option>
+							<option value="">연령대</option>
+							<option value="">피부타입</option>
+							<option value="">피부밝기</option>
+							<option value="">피부톤</option>
+							<option value="">피부고민</option>
+							<option value="">뷰티레벨</option>
+							<option value="">직업</option>
+							<option value="" selected>거주지역</option>
+							<option value="">자녀여부</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--컨텐츠 끝 -->
+</div>
+<!-- contents : e -->
+
+<script>
+//임시 확인용 스크립트
+$(function(){
+	$('.btn_favorite').click(function(e){
+		e.preventDefault();
+		$(this).toggleClass('on');
+	});
+});
+</script>
+</body>
+</html>
