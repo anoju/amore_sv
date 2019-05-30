@@ -170,7 +170,8 @@ var splitText = function(tar){
 					$tag = $split[i];
 					$isTag = true;
 				}else if($split[i] == ' '){
-					$html += '<span class="spt">&nbsp;</span>';
+					//$html += '<span class="spt">&nbsp;</span>';
+					$html += ' ';
 				}else{
 					j++;
 					$html += '<span class="spt" style="';

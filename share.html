@@ -5,25 +5,49 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>Document</title>
+
+	<meta property="og:title" content="오월엔, 뷰포붐">
+	<meta property="og:description" content="5월엔 역대급 적립찬스! 오월엔, 뷰포붐">
+	<meta property="og:image" content="http://nufo.amorepacific.com/upload_files/ap_beautypoint/images/banner_img/10/mobilemain.png">
+
+	<link rel="stylesheet" type="text/css" href="./html/common/css/mobile/front.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+
 	<script src="./html/common/js/jquery-1.9.1.min.js"></script>
 	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-	<script src="./html/common/js/share.js"></script>
-	<!-- <meta property="og:description" content="공유하기 설명글 공유하기 설명글 공유하기 설명글 공유하기 설명글"> -->
+	<script src="./js/share.js"></script>
+<style>
+.sv_button .fab{font-size:1.5em;vertical-align:middle;font-weight:normal;}
+.sv_survey dt sub{color:#bbb;}
+</style>
 </head>
 
 <body>
-	<dl>
-		<dt>공유하기</dt>
-		<dd>
-			<button onclick="shareSns('facebook','페이스북 공유하기','http://nufo.amorepacific.com/upload_files/ap_beautypoint/images/banner_img/10/mobilemain.png');">페이스북</button>
-			<button onclick="shareSns('twitter','트위터 공유하기','http://nufo.amorepacific.com/upload_files/ap_beautypoint/images/banner_img/10/mobilemain.png');">twitter</button>
-			<button onclick="shareSns('naver_blog','네이버 블로그 공유하기','http://nufo.amorepacific.com/upload_files/ap_beautypoint/images/banner_img/10/mobilemain.png');">naver blog</button>
-			<button onclick="shareSns('google_plus','구글plus 공유하기','http://nufo.amorepacific.com/upload_files/ap_beautypoint/images/banner_img/10/mobilemain.png');">google plus</button>
-			<button onclick="shareSns('pinterest','pinterest 공유하기','http://nufo.amorepacific.com/upload_files/ap_beautypoint/images/banner_img/10/mobilemain.png');">pinterest</button>
-			<button onclick="shareSns('kakao_story','카카오스토리 공유하기','http://nufo.amorepacific.com/upload_files/ap_beautypoint/images/banner_img/10/mobilemain.png');">kakao story</button>
-			<button onclick="shareSns('kakao_talk','카카오톡 공유하기','http://nufo.amorepacific.com/upload_files/ap_beautypoint/images/banner_img/10/mobilemain.png');">카카오톡</button>
-		</dd>
-	</dl>
+	<!-- Contents -->
+	<div class="sv_survey_wrap">
+		<div class="sv_inner">
+			<dl class="sv_survey">
+				<dt>공유하기 기능 <br><sub>카카오톡 공유하기는 key 값(임시 개인 키값 설정)이 필요</sub></dt>
+				<dd>
+					<div class="btn_wrap">
+						<span><button class="sv_button blue" onclick="shareSns('facebook');"><i class="fab fa-facebook-f"></i><span class="blind">페이스북</span></button></span>
+						<span><button class="sv_button dark" onclick="shareSns('twitter');"><i class="fab fa-twitter"></i><span class="blind">트위터</span></button></span>
+					</div>
+					<div class="btn_wrap">
+						<span><button class="sv_button blue" onclick="shareSns('google_plus');"><i class="fab fa-google-plus-g"></i><span class="blind">google plus</span></button></span>
+						<span><button class="sv_button dark" onclick="shareSns('pinterest');"><i class="fab fa-pinterest-p"></i><span class="blind">pinterest</span></button></span>
+					</div>
+					<div class="btn_wrap">
+						<span><button class="sv_button blue" onclick="shareSns('naver_blog');">네이버 블로그</button></span>
+						<span><button class="sv_button dark" onclick="shareSns('kakao_story');">카카오 스토리</button></span>
+					</div>
+					<div class="btn_wrap">
+						<span><button class="sv_button blue" onclick="shareSns('kakao_talk');">카카오톡</button></span>
+					</div>
+				</dd>
+			</dl>
+		</div>
+	</div>
 </body>
 
 </html>

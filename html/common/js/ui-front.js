@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	svPopupUI();
+	inputFocusUI();
 	scrollItem();
 	winScrollUI();
 	etcChkInput();
@@ -9,9 +9,29 @@ $(document).ready(function(){
 	$(window).load(function(){
 		$(window).resize();
 	});
+	//var $endConfetti = $('.sv_end_visual').find('.confetti');
+	//if($endConfetti.length > 0) complateEffect($endConfetti);	//인터렉션 함수;
 });
 
-//기타 항목 선택 시 입력 영역 노출
+//input:focus 시 키보드 위로 스크롤
+var inputFocusUI = function(){
+	var $elements = 'input[type=text], input[type=tel], input[type=number], textarea';
+	$(document).on('focusin',$elements, function() {
+		var $top = $(this).offset().top,
+			$scrollTop = $(window).scrollTop(),
+			$winCenter = $(window).height() / 2;
+		if( $top > ($scrollTop+$winCenter)){
+			$( 'html, body' ).animate( {'scrollTop': '+='+$winCenter}, 500);
+		}
+		$('body').addClass("inputFocus");
+	});
+
+	$(document).on('focusout',$elements, function() {
+		$('body').removeClass("inputFocus");
+	});
+};
+
+//기타항목 선택 시 입력영역 노출
 var etcChkInput = function(){
 	$(document).on('change','.sv_check_item > input',function(){
 		var $type = $(this).attr('type'),
@@ -35,6 +55,13 @@ var etcChkInput = function(){
 			}
 		}
 	});
+
+	//기타항목 입력영역에 값이 있을경우 노출(미리보기 팝업에서 사용)
+	$('.sv_check_etc').each(function(){
+		var $val =  $(this).find('input').val(),
+			$prevInput = $(this).prev().children('input');
+		if($val != '' && $prevInput.prop('checked'))$(this).show();
+	});
 };
 
 //설문항목 이미지, iframe 타입 체크
@@ -55,12 +82,26 @@ var svItemImgType = function(){
 					$img.css('opacity',0);
 				});
 			}
+
+			//미리보기 시 기타항목 입력영역 노출
+			/*var $input = $(this).children('input'),
+				//$type = $input.attr('type'),
+				$lblTxt = $(this).find('.lbl').children('div').text(),
+				$etcInput = $(this).next('.sv_check_etc');
+			
+			if($input.prop('disabled') && $lblTxt == '기타'){
+				if($input.prop('checked')){
+					$etcInput.show();
+				}
+			}*/
 		});
 		var $imgViewType = localStorage.getItem('imgViewType');
 		if($imgViewType == 'gallery' && $('.sv_check_item_wrap.type3').length == 1){
 			$('.btn_view_util.gal').addClass('on').siblings().removeClass('on');
 			$('.sv_check_item_wrap.type3').addClass('gallery');
 		}
+
+				
 	}
 	$('.sv_check_item_wrap.type3 .sv_check_item').each(function(){
 		if($(this).find('.sv_img').length == 0){
@@ -102,23 +143,29 @@ var svCheckboxNumbering = function(){
 		$checkbox.change(function(){
 			if($(this).prop('checked')){
 				var $length = $checkbox.filter(":checked").length,
-					$txt = $(this).siblings('.lbl').children('div').text();
-				$(this).siblings('.lbl').append('<span class="num">'+$length+'</span>');
-				$inpWrap.find('input').eq($length-1).val($txt);									//input:text 에 val 입력
+					$txt = $(this).siblings('.lbl').children('div').text(),
+					$input = $inpWrap.find('input').eq($length-1);
+
+				if($input.length > 0){
+					$(this).siblings('.lbl').append('<span class="num">'+$length+'</span>');
+					$input.val($txt);									//input:text 에 val 입력
+				}
 			}else{
 				var $num = $(this).siblings('.lbl').find('.num'),
 					$numTxt = $num.text();
-				$checkbox.each(function(){
-					var $num2 = $(this).siblings('.lbl').find('.num'),
-						$numTxt2 = $num2.text(),
-						$txt2 = $(this).siblings('.lbl').children('div').text();
-					if($numTxt < $numTxt2){
-						$numTxt2 = $numTxt2-1;
-						$num2.text($numTxt2);													//클때 넘버링 조정
-					}
-					if($numTxt2 > 0)$inpWrap.find('input').eq($numTxt2-1).val($txt2);			//클때 input:text 에 val 조정
-				});
-				$num.remove();																	//자신일때 넘버링 삭제
+				if($num.length > 0){
+					$num.remove();																	//자신일때 넘버링 삭제
+					$checkbox.each(function(){
+						var $num2 = $(this).siblings('.lbl').find('.num'),
+							$numTxt2 = $num2.text(),
+							$txt2 = $(this).siblings('.lbl').children('div').text();
+						if($numTxt < $numTxt2){
+							$numTxt2 = $numTxt2-1;
+							$num2.text($numTxt2);													//클때 넘버링 조정
+						}
+						if($numTxt2 >= 0)$inpWrap.find('input').eq($numTxt2-1).val($txt2);			//클때 input:text 에 val 조정
+					});
+				}
 			}
 
 			/* 체크 해제시 input:text의 val 삭제*/
@@ -149,23 +196,12 @@ var svCheckboxNumbering = function(){
 };
 
 //완료 팝업
-var svPopupUI = function(){
-	$(document).on('click','.sv-pop-open',function(e) {
-		e.preventDefault();
-		var $pop = $(this).attr('href');
-		svPopOpen($pop);
-	});
-	$(document).on('click','.sv-pop-close',function(e) {
-		e.preventDefault();
-		var $pop = $(this).closest('.pop_wrap');
-		svPopClose($pop);
-	});
-};
 var svPopOpen = function(tar){
 	if($(tar).length < 1) return console.log('해당팝업없음');
 	$('body').addClass('scroll_lock');	
 	$(tar).addClass('open');
-	if($('.confetti').length > 0) complateEffect('.confetti');	//인터렉션 함수;
+	var $confetti = $(tar).find('.confetti');
+	if($confetti.length > 0) complateEffect($confetti);	//인터렉션 함수;
 };
 var svPopClose = function(tar){
 	$(tar).fadeOut(500,function(){
@@ -215,8 +251,8 @@ var complateEffect = function(wrap){
 				//코인(1가지 모양, 3가지 사이즈)
 				rdSpeed = randomNumber(10,15,0) * 100;	//속도조절
 				$html = '<span class="item size'+rdSize+'" style="left:'+rdLeft+'%;';
-					$html += '-webkit-animation:confettiCoin '+rdSpeed+'ms infinite linear '+rdDelay+'ms;';
-					$html += 'animation:confettiCoin '+rdSpeed+'ms infinite linear '+rdDelay+'ms;';
+					$html += '-webkit-animation:confettiCoin '+rdSpeed+'ms linear '+rdDelay+'ms;';
+					$html += 'animation:confettiCoin '+rdSpeed+'ms linear '+rdDelay+'ms;';
 				$html += '"></span>';
 			}else if($wrap.hasClass('type3')){
 				//깜빡임(3가지 모양, 3가지 사이즈, 3가지 컬러)

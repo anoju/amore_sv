@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+    <title>뷰포설문 오픈 안내</title>
+    <link rel="stylesheet" type="text/css" href="../resource/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../resource/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../resource/css/survey.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="contents">
+            <div class="sv_comming_soon">
+                <div>
+                    <div>
+                        <div class="bg">뷰포설문</div>
+                        <div class="date"><strong>2019.06.12</strong></div>
+                        <div class="tit"><strong>COMMING SOON</strong></div>
+                        <div id="clock"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="../resource/js/jquery-1.9.1.min.js"></script>
+    <script src="../resource/js/swiper.min.js"></script>
+    <script src="../resource/js/default.js"></script>
+    <script src="../resource/js/ui-survey.js"></script>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jun 12, 2019 10:00:00").getTime();
+        
+        // Update the count down every 1 second
+        var countDownTime = setInterval(function() {
+        
+            // Get today's date and time
+            var now = new Date().getTime();
+        
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+        
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if (("" + days).length == 1) {days = "0" + days;}
+            if (("" + hours).length == 1) {hours = "0" + hours;}
+            if (("" + minutes).length == 1) {minutes = "0" + minutes;}
+            if (("" + seconds).length == 1) {seconds = "0" + seconds;}
+        
+            // Display the result in the element with id="demo"
+            document.getElementById("clock").innerHTML = days + "d : " + hours + "h : " + minutes + "m : " + seconds + "s ";
+        
+            // If the count down is finished, write some text 
+            if (distance < 0) {
+                clearInterval(countDownTime);
+                location.href = "main.html";
+            }
+        }, 1000);
+        </script>
+</body>
+</html>

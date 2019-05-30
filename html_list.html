@@ -21,6 +21,8 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 .table tr.line th,
 .table tr.line td{border-top: 3px solid #ccc;}
 .table tbody tr:hover > *{background: #fff3a7 !important;}
+.table tr.del td{color:#999;text-decoration:line-through;}
+.table tr.del td a{color:inherit;}
 </style>
 </head>
 <body>
@@ -50,7 +52,7 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 			</thead>
 			<tbody>
 				<tr>
-					<th scope="row" rowspan="2">앱</th>
+					<th scope="row" rowspan="5">앱</th>
 					<td class="tl">메인</td>
 					<td class="tl"></td>
 					<td class="tl link">./pb/renew2/survey/main.html</td>
@@ -67,10 +69,34 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 					<td></td>
 					<td class="tl"></td>
 				</tr>
+				<tr>
+					<td class="tl">티저</td>
+					<td class="tl"></td>
+					<td class="tl link">./pb/renew2/survey/comming_soon.html</td>
+					<td>2019-05-28</td>
+					<td></td>
+					<td class="tl"></td>
+				</tr>
+				<tr class="del">
+					<td class="tl">티저2</td>
+					<td class="tl"></td>
+					<td class="tl link">./pb/renew2/survey/comming_soon_2.html</td>
+					<td>2019-05-28</td>
+					<td></td>
+					<td class="tl"></td>
+				</tr>
+				<tr class="del">
+					<td class="tl">티저3</td>
+					<td class="tl"></td>
+					<td class="tl link">./pb/renew2/survey/comming_soon_3.html</td>
+					<td>2019-05-28</td>
+					<td></td>
+					<td class="tl"></td>
+				</tr>
 
 				<tr class="line">
-					<th scope="row" rowspan="23">설문</th>
-					<td class="tl">랭킹</td>
+					<th scope="row" rowspan="30">설문</th>
+					<td class="tl" rowspan="2">랭킹</td>
 					<td class="tl"></td>
 					<td class="tl link">./html/front_html/ranking.html</td>
 					<td>2019-04-26</td>
@@ -78,7 +104,14 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 					<td class="tl">미완료</td>
 				</tr>
 				<tr>
-					<td class="tl" rowspan="13">설문유형</td>
+					<td class="tl">no data</td>
+					<td class="tl link">./html/front_html/ranking_0.html</td>
+					<td>2019-05-27</td>
+					<td></td>
+					<td class="tl"></td>
+				</tr>
+				<tr>
+					<td class="tl" rowspan="15">설문유형</td>
 					<td class="tl">타입1(매트릭스)</td>
 					<td class="tl link">./html/front_html/question_1.html</td>
 					<td>2019-04-26</td>
@@ -107,18 +140,23 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 					<td class="tl"></td>
 				</tr>
 				<tr>
-					<td class="tl">타입5(순위선택형)</td>
+					<td class="tl" rowspan="3">타입5(순위선택형)</td>
 					<td class="tl link">./html/front_html/question_5.html</td>
 					<td>2019-04-26</td>
 					<td></td>
 					<td class="tl"></td>
 				</tr>
 				<tr>
-					<td class="tl">타입5_2(순위선택형+매트릭스)</td>
 					<td class="tl link">./html/front_html/question_5_2.html</td>
 					<td>2019-05-16</td>
 					<td></td>
-					<td class="tl"></td>
+					<td class="tl">+매트릭스</td>
+				</tr>
+				<tr>
+					<td class="tl link">./html/front_html/question_5_3.html</td>
+					<td>2019-05-22</td>
+					<td></td>
+					<td class="tl">+선택제한<br><sub>checked 제한은 솔루션 기능에 있음</sub></td>
 				</tr>
 				<tr>
 					<td class="tl">타입6(단일형)</td>
@@ -166,6 +204,13 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 					<td class="tl">위, 아래 요약기능</td>
 					<td class="tl link">./html/front_html/question_summary.html</td>
 					<td>2019-05-03</td>
+					<td></td>
+					<td class="tl"></td>
+				</tr>
+				<tr>
+					<td class="tl">카운팅 심플타입</td>
+					<td class="tl link">./html/front_html/question_count.html</td>
+					<td>2019-05-30</td>
 					<td></td>
 					<td class="tl"></td>
 				</tr>
@@ -233,6 +278,35 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 					<td></td>
 					<td class="tl"></td>
 				</tr>
+				<tr>
+					<td class="tl" rowspan="4">기타</td>
+					<td class="tl">로딩바</td>
+					<td class="tl link">./html/front_html/loading.html</td>
+					<td>2019-05-22</td>
+					<td></td>
+					<td class="tl"></td>
+				</tr>
+				<tr>
+					<td class="tl">에러</td>
+					<td class="tl link">./html/front_html/error.html</td>
+					<td>2019-05-22</td>
+					<td></td>
+					<td class="tl"></td>
+				</tr>
+				<tr>
+					<td class="tl">종료 화면</td>
+					<td class="tl link">./html/front_html/question_end.html</td>
+					<td>2019-05-24</td>
+					<td></td>
+					<td class="tl"></td>
+				</tr>
+				<tr>
+					<td class="tl">포인트적립 화면</td>
+					<td class="tl link">./html/front_html/question_point.html</td>
+					<td>2019-05-24</td>
+					<td></td>
+					<td class="tl"></td>
+				</tr>
 			</tbody>
 			<tfoot>
 				<tr></tr>
@@ -281,7 +355,7 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 					<td class="tl"></td>
 				</tr>
 				<tr>
-					<td class="tl" rowspan="5">설문대시보드</td>
+					<td class="tl" rowspan="7">설문대시보드</td>
 					<td class="tl">설문대시보드</td>
 					<td class="tl"></td>
 					<td class="tl link">./html/admin_html/survey_dashboard.html</td>
@@ -298,7 +372,15 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 					<td class="tl"></td>
 				</tr>
 				<tr>
-					<td class="tl" rowspan="3">설문대시보드_상세</td>
+					<td class="tl">내 즐겨찾기</td>
+					<td class="tl"></td>
+					<td class="tl link">./html/admin_html/survey_dashboard_3.html</td>
+					<td>2019-04-23</td>
+					<td></td>
+					<td class="tl"></td>
+				</tr>
+				<tr>
+					<td class="tl" rowspan="4">설문대시보드_상세</td>
 					<td class="tl" rowspan="3"></td>
 					<td class="tl link">./html/admin_html/survey_dashboard_view.html</td>
 					<td>2019-04-24</td>
@@ -316,6 +398,13 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 					<td>2019-04-24</td>
 					<td></td>
 					<td class="tl">다답형</td>
+				</tr>
+				<tr>
+					<td class="tl">필터 적용 후 값이 없을때</td>
+					<td class="tl link">./html/admin_html/survey_dashboard_view_0.html</td>
+					<td>2019-05-22</td>
+					<td></td>
+					<td class="tl"></td>
 				</tr>
 				<tr>
 					<td class="tl" rowspan="5">응답자 대시보드</td>
@@ -358,6 +447,23 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 					<td></td>
 					<td class="tl"></td>
 				</tr>
+				<tr>
+					<td class="tl" rowspan="2">에러</td>
+					<td class="tl"></td>
+					<td class="tl"></td>
+					<td class="tl link">./html/admin_html/error.html</td>
+					<td>2019-05-30</td>
+					<td></td>
+					<td class="tl">프론트랑 동일하게 변경</td>
+				</tr>
+				<tr class="del">
+					<td class="tl"></td>
+					<td class="tl"></td>
+					<td class="tl link">./html/admin_html/error_old.html</td>
+					<td>2019-05-22</td>
+					<td></td>
+					<td class="tl"></td>
+				</tr>
 			</tbody>
 			<tfoot>
 				<tr></tr>
@@ -388,7 +494,7 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 			</thead>
 			<tbody>
 				<tr>
-					<td class="tl" rowspan="3">웹스킨</td>
+					<td class="tl" rowspan="4">웹스킨</td>
 					<td class="tl">시작</td>
 					<td class="tl"></td>
 					<td class="tl link">./html/skin_web/ko_template20_main.html</td>
@@ -413,10 +519,18 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 					<td class="tl"></td>
 				</tr>
 				<tr>
-					<td class="tl" rowspan="3">모바일스킨</td>
+					<td class="tl">포인트적립</td>
+					<td class="tl"></td>
+					<td class="tl link">./html/skin_web/ko_template20_point.html</td>
+					<td>2019-05-17</td>
+					<td></td>
+					<td class="tl"></td>
+				</tr>
+				<tr>
+					<td class="tl" rowspan="5">모바일스킨</td>
 					<td class="tl">시작</td>
 					<td class="tl"></td>
-					<td class="tl link">./html/skin_moile/bizenic7_sample10(2).html</td>
+					<td class="tl link">./html/skin_moile/bizenic7_sample10_main.html</td>
 					<td>2019-05-17</td>
 					<td></td>
 					<td class="tl"></td>
@@ -432,8 +546,24 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 				<tr>
 					<td class="tl">종료</td>
 					<td class="tl"></td>
-					<td class="tl link">./html/skin_moile/bizenic7_sample10(3).html</td>
+					<td class="tl link">./html/skin_moile/bizenic7_sample10_end.html</td>
 					<td>2019-05-17</td>
+					<td></td>
+					<td class="tl"></td>
+				</tr>
+				<tr>
+					<td class="tl">포인트 적립</td>
+					<td class="tl"></td>
+					<td class="tl link">./html/skin_moile/bizenic7_sample10_point.html</td>
+					<td>2019-05-24</td>
+					<td></td>
+					<td class="tl"></td>
+				</tr>
+				<tr>
+					<td class="tl">컨텐츠</td>
+					<td class="tl"></td>
+					<td class="tl link">./html/skin_moile/bizenic7_sample10_2.html</td>
+					<td>2019-05-22</td>
 					<td></td>
 					<td class="tl"></td>
 				</tr>
@@ -478,7 +608,7 @@ $(function(){
 			}
 		});
 		
-		var $tfoot = '<td class="tr" colspan="3"><strong>총 '+$('tbody tr').length+' 페이지</strong></td>';
+		var $tfoot = '<td class="tr" colspan="3"><strong>총 '+$(this).find('tbody tr').length+' 페이지</strong></td>';
 		$tfoot += '<td> 진행중 : '+linkArry.length+' 페이지</td>';
 		$tfoot += '<td> 완료 : '+endArry.length+' 페이지</td>';
 		$tfoot += '<td> 재수정 : '+chgArry.length+' 페이지</td><td></td>';

@@ -32,8 +32,8 @@ a{color:inherit;text-decoration:none;}
 .num-item .rol{position:relative;display:block;}
 .num-item .rol span{display:block;}
 
-.sv_table{width:100%;border-collapse:collapse;letter-spacing:-0.2667vw;}
-.sv_table th, .sv_table td{border:0.2667vw solid #dddddd;text-align:center;font-size:2.9333vw;padding:1.3333vw;height:9.3333vw;background:#fff;}
+.sv_table{width:100%;border-collapse:collapse;letter-spacing:-0.2667vw;border-top:0.2667vw solid #dddddd;}
+.sv_table th, .sv_table td{border:0.2667vw solid #dddddd;border-top:0 none;text-align:center;font-size:2.9333vw;padding:1.3333vw;height:9.3333vw;background:#fff;}
 .sv_table thead th{background:#eeeeee;font-weight:bold;}
 .sv_table tbody th{font-weight:normal;}
 
@@ -58,7 +58,7 @@ a{color:inherit;text-decoration:none;}
 .sv_main_btn > ul > li a:before{content:'';display:block;width:4vw;height:4vw;position:absolute;left:0;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);background-size:contain !important;}
 .sv_main_btn .ic_info:before{background:url(../images/survey/ic_info.png) no-repeat;}
 .sv_main_btn .ic_ranking:before{background:url(../images/survey/ic_ranking.png) no-repeat;}
-.contents_banner.sv_main_banner{height:26.6667vw;}
+.contents_banner.sv_main_banner{height:26.6667vw;background-position:center center;}
 .sv_main_banner .swiper-slide > a{display:block;height:26.6667vw;}
 
 /* contents */
@@ -89,3 +89,16 @@ a{color:inherit;text-decoration:none;}
 .sv_guide_txt{text-align:center;line-height:1.4;}
 .sv_guide_link{text-align:center;font-weight:bold;margin-top:2.1333vw;}
 .sv_guide_link > a{display:inline-block;color:#549cf5;padding-right:3.4667vw;background:url(../images/survey/sv_guide_link_arr.png) no-repeat right center;background-size:auto 2.5333vw;}
+
+.sv_comming_soon{position:absolute;top:0;left:0;width:100%;height:100%;background:#55b0da;color:#fff;overflow:auto;}
+.sv_comming_soon.bg{overflow:hidden;background:#55b0da url(../images/survey/bg_comming_soon.png) no-repeat center center;background-size:contain;}
+.sv_comming_soon > div{display:table;width:100%;height:100%;}
+.sv_comming_soon > div > div{display:table-cell;vertical-align:middle;text-align:center;}
+.sv_comming_soon .bg{height:61.7333vw;font-size:0;color:transparent;background:url(../images/survey/bg_comming_soon_.png) no-repeat center center;background-size:contain;}
+.sv_comming_soon .date{font-size:5.3333vw;color:#fff;margin-top:5.3333vw;}
+.sv_comming_soon .tit{font-size:6.6667vw;color:#fff;margin-top:10.6667vw;}
+.sv_comming_soon .date + .tit{margin-top:0;}
+.sv_comming_soon .txt{font-size:3.2vw;color:#fff;margin-top:10.6667vw;}
+.sv_comming_soon .clock{margin-top:2vw;}
+.sv_comming_soon .flip-clock-divider .flip-clock-label{top:auto;bottom:-1.5em;}
+.sv_comming_soon #clock{font-size:6.6667vw;color:#fff;min-height:1.3em;font-weight:100;margin-top:6.6667vw;}

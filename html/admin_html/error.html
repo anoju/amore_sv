@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BIZenic8 Demo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=EmulateIE9,chrome=1" />
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW"> 
+<meta name="GOOGLEBOT" content="NOSNIPPET"> 
+<meta name="ROBOTS" v="NOARCHIVE"> 
+
+<link rel="stylesheet" type="text/css" href="../common/css/color_blue.css">
+<link rel="stylesheet" type="text/css" href="../common/css/default.css">
+
+<link rel="shortcut icon" href="../common/image/favicon.ico">
+<script language="JavaScript" type="text/JavaScript" src="../common/js/bizenic.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/jquery-1.9.1.min.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/validator.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/date_picker.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/message/message_ko.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/imgOperate.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="../common/js/common_main.js"></script>
+<script type="text/javascript" src="../common/js/respond.js"></script>
+<script src="../common/js/chart_JUI/core_160327.js"></script>
+<script src="../common/js/chart_JUI/chart_160327.js"></script>
+
+<!-- 추가 css,js -->
+<link rel="stylesheet" type="text/css" href="../common/css/select2.min.css">
+<link rel="stylesheet" type="text/css" href="../common/css/amore.css">
+<script type="text/javascript" src="../common/js/select2.min.js"></script>
+<script type="text/javascript" src="../common/js/amore.js"></script>
+<!-- //추가 css,js -->
+</head>
+<body>
+<!-- wrap : s -->
+<div id="wrap">
+	<!-- header : s -->
+	<div id="headerWr">
+		<div class="topWrap">
+				<div class="header">
+				<!-- LOGO : s 세로사이즈는 26px 가로사이즈는 180px을 넘지 않는다.-->
+				<h1><a href="#"><img src="../common/image/amore/logo.png" alt="아모레 퍼시픽"></a></h1>
+				<!-- LOGO : e 세로사이즈는 26px 가로사이즈는 180px을 넘지 않는다.-->
+				
+				<!-- 로그아웃, 나의정보, 메뉴얼 : s -->
+				<div class="snb">
+					<ul class="etc_img">
+						<li><a href="../logoutCtl.jsp?sessID=223_38_23_129542_0"><img src="../common/image/btn_logout_ko_blue.gif" /></a></li>
+						<li><a href="javascript:jsMyinfo()"><img src="../common/image/btn_myinfo_ko_blue.gif"/></a></li>
+					</ul>
+				</div>
+				<!-- 로그아웃, 나의정보, 메뉴얼 : e -->
+				<!------------------------------	탑메뉴 시작 ------------------------------------------>	 
+				<!-- gnb : s -->		 
+				<div class="gnb">
+					<ul>
+						<li>
+							<a href="#">설문 관리</a>
+							<!-- 2depth : s -->
+							<div class="depth2" >
+								<ul>
+									<li><a href="#">설문지</a></li>
+									<li><a href="#">설문진행</a></li>
+									<li><a href="#">설문스킨</a></li>
+									<li><a href="#">설문분석</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">설문 대시보드</a>
+							<!-- 2depth : s -->
+							<div class="depth2" >
+								<ul>
+									<li><a href="#">설문 대시보드</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">응답자 대시보드</a>
+							<!-- 2depth : s -->
+							<div class="depth2" >
+								<ul>
+									<li><a href="#">응답자 개요</a></li>
+									<li><a href="#">일별 참여 현황</a></li>
+									<li><a href="#">응답자별 참여 현황</a></li>
+									<li><a href="#">응답자 조회</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">솔루션</a>
+							<!-- 2depth : s -->
+							<div class="depth2" >
+								<ul>
+									<li><a href="#">사용자</a></li>
+									<li><a href="#">DB 연결정보</a></li>
+									<li><a href="#">트리</a></li>
+									<li><a href="#">공지사항</a></li>
+									<li><a href="#">로그인</a></li>
+									<li><a href="#">개인정보로그</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">시스템</a>
+						</li>
+					</ul>
+				</div>
+			<!-- gnb : e -->
+			<!------------------------------	탑메뉴 끝------------------------------------------>
+			</div>
+		</div>
+		<!-- header : e -->
+		<div id="container">
+		</div>
+	</div>
+</div>
+<!-- wrap : e -->
+<!-- contents : s -->
+<div id="content">
+	<!-- <div class="am_main_info error">
+		<div class="icon"><img src="../common/image/amore/icon_error.png" alt=""></div>
+		<div class="tit">서비스 이용이 원활하지 않습니다.</div>
+		<div class="text">이용에 불편을 드려 죄송합니다.<br>
+		잠시 후 이용 바랍니다.</div>
+		<div class="link"><a href="#">이전 페이지로 이동하기 &gt;</a></div>
+	</div> -->
+	<div class="error_txt">  
+		<table>  
+			<tbody>
+				<tr>  
+					<td>  
+						<div class="img"></div>
+						<h1 class="tit">서비스 이용이 원활하지 않습니다.</h1>
+						<div class="text">이용에 불편을 드려 죄송합니다.<br>
+						잠시 후 이용 바랍니다.</div>
+						<div class="link"><a href="#">이전 페이지로 이동하기</a></div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!-- contents : e -->
+</body>
+</html>

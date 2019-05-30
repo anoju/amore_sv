@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=10,IE=EmulateIE9,chrome=1" />
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 	<title>Amorepacific Beautypoint</title>
 	<link rel="stylesheet" type="text/css" href="../common/css/mobile/animate.css">
 	<link rel="stylesheet" type="text/css" href="../common/css/mobile/front.css">
@@ -18,22 +18,6 @@
 		<div class="sv_pop_view_cont">
 			<!-------------------------------------실제 컨텐츠만 들어갈곳(하얀박스) ------------------------------------->
 			<div class="sv_survey_wrap">
-				<!-- 사용? -->
-				<!-- <div class="sv_inner">
-					<div class="sv_today_score">
-						<dl class="info">
-							<dt>오늘의 설문</dt>
-							<dd>10/20개</dd>
-						</dl>
-						<div class="sv_graph">
-							<div class="line">
-								<div class="bar" style="width:10%;"></div>
-								<div class="mark"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<hr class="sv_hr"> -->
 				<div class="sv_inner">
 					<dl class="sv_survey">
 						<dt>귀하께서는 다음의 품목을 얼마나 자주 사용하십니까?</dt>
@@ -209,6 +193,9 @@
 										<!-- <span class="num">4</span> --><!-- 하단 스크립트 함수로 처리-->
 									</div>
 								</label>
+								<div class="sv_check_etc">
+									<input type="text" placeholder="입력해주세요." readonly="readonly" value="빨간색">
+								</div>
 							</div>
 						</dd>
 					</dl>
@@ -218,8 +205,10 @@
 					<dl class="sv_survey">
 						<dt>헤라 홀리데이 컬렉션의 첫 인상은 어떠신가요? 자유롭게 써주세요. <sub>(30자 이내)</sub></dt>
 						<dd>
-							<textarea class="sv_textarea" maxlength="30" placeholder="텍스트를 입력해주세요" readonly="readonly">좋은 화장품이네요~ 담에 또 구매할게요</textarea>
-							<div class="sv_textarea_byte">21/500자</div>
+							<div class="sv_textarea_wrap">
+								<textarea class="sv_textarea" maxlength="30" placeholder="텍스트를 입력해주세요" readonly="readonly">좋은 화장품이네요~ 담에 또 구매할게요</textarea>
+								<div class="sv_textarea_byte">21/500자</div>
+							</div>
 						</dd>
 					</dl>
 					
@@ -308,7 +297,48 @@
 							</div>
 						</dd>
 					</dl>
-			
+					
+					<hr class="sv_hr">
+					<dl class="sv_survey">
+						<dt>뷰티포인트를 방문하신 목적은 무엇인가요? <sub class="require">* 본 문항은 필수 입력 문항입니다.</sub></dt>
+						<dd>
+							<div class="sv_check_item_wrap">
+								<label class="sv_check_item">
+									<input type="radio" name="radio" id="" disabled="disabled">
+									<div class="lbl">
+										<div>제품 정보를 얻기 위해서</div>
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="radio" name="radio" id="" disabled="disabled">
+									<div class="lbl">
+										<div>구매 및 혜택을 얻기 위해서</div>
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="radio" name="radio" id="" disabled="disabled">
+									<div class="lbl">
+										<div>이벤트에 참여하기 위해</div>
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="radio" name="radio" id="" disabled="disabled">
+									<div class="lbl">
+										<div>고객 지원 정보(서비스,FAQ)를 얻기 위해</div>
+									</div>
+								</label>
+								<label class="sv_check_item">
+									<input type="radio" name="radio" id="" disabled="disabled" checked="checked">
+									<div class="lbl">
+										<div>기타</div>
+									</div>
+								</label>
+								<div class="sv_check_etc">
+									<input type="text" placeholder="입력해주세요." readonly="readonly" value="지인 추천으로">
+								</div>
+							</div>
+						</dd>
+					</dl>
 				</div>
 			</div>
 			<!-------------------------------------//실제 컨텐츠만 들어갈곳(하얀박스) ------------------------------------->
