@@ -6,10 +6,10 @@ body{margin:0;}
 .sk_button{position:relative;display:inline-block;min-width:170px;color:#fff;background:#444444;text-align:center;vertical-align:middle;box-sizing:border-box;cursor:pointer;border-radius:30px;border:0 none;-webkit-appearance:none;padding:0 15px;line-height:60px;height:60px;font-size:20px;white-space:nowrap;overflow:hidden;text-decoration:none;}
 
 /* 모바일 */
-.amore_mobile_skin{background:#f5f5f5;font:normal 3.733vw/1.3 "Helvetica Neue","Apple SD Gothic Neo",sans-serif;color:#000;word-break:keep-all;letter-spacing:-0.05em;-webkit-text-size-adjust:none;text-size-adjust:none;-webkit-tap-highlight-color:transparent;-webkit-overflow-scrolling:touch;}
+.amore_mobile_skin{background:#f5f5f5;font:normal 3.733vw/1.3 "Helvetica Neue","Apple SD Gothic Neo",sans-serif;color:#000;word-break:keep-all;letter-spacing:-0.05em;-webkit-text-size-adjust:none;text-size-adjust:none;-webkit-tap-highlight-color:transparent;-webkit-overflow-scrolling:touch;padding-bottom:5.3333vw;}
 .skin_tit{margin:0;}
 .skin_tit img{width:100%;}
-.skin_cont_box{background:#fff;margin:5.3333vw;padding:5.3333vw;border:0.2667vw solid #e6e6e6;}
+.skin_cont_box{background:#fff;margin:5.3333vw 5.3333vw 0;padding:5.3333vw;border:0.2667vw solid #e6e6e6;}
 .skin_cont{min-height:106.6667vw;font-size:3.733vw;}
 /* .skin_cont{display:table;width:100%;height:106.6667vw;}
 .skin_cont > div{display:table-cell;vertical-align:middle;word-break:break-all;} */
@@ -17,7 +17,9 @@ body{margin:0;}
 
 .amore_mobile_skin .sk_button{min-width:33.3333vw;border-radius:5.3333vw;padding:0 4.0000vw;line-height:10.6667vw;height:10.6667vw;font-size:4.2667vw;}
 .amore_mobile_skin .sv_survey_wrap{padding:0;}
-.amore_mobile_skin .sv_survey:first-child{padding-top:0;}
+.amore_mobile_skin .sv_inner{padding:0;}
+.amore_mobile_skin .sv_hr + .sv_survey{margin-top:5.3333vw;}
+.amore_mobile_skin .sv_today_score.count{position:relative;background:#f5f5f5;padding-top:0;padding-left:0;padding-right:0;margin:-5.6vw -5.6vw 5.333vw;text-align:right;border-bottom: 0.2667vw solid #e6e6e6;}
 
 
 .sv_survey_info img{max-width:100%;}

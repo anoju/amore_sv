@@ -20,52 +20,36 @@
 				</dl>
 				<div class="sv_graph">
 					<div class="line">
-						<div class="bar" style="width:20%;"></div>
+						<div class="bar" style="width:30%;"></div>
 						<div class="mark"></div>
 					</div>
 				</div>
 			</div>
 			<div class="sv_inner">
 				<dl class="sv_survey">
-					<dt>라네즈 크림스킨에 대한 만족도 점수를 적어주세요. <sub>(항목당 최대 20점)</sub></dt>
+					<dt>다음은 어떤 동영상이 더 효과적은 광고가 될까요?</dt>
 					<dd>
-						<table class="sv_table">
-							<caption>만족도 설문조사</caption>
-							<colgroup>
-								<col style="width:55%">
-								<col style="width:45%">
-							</colgroup>
-							<thead>
-								<tr>
-									<th scope="col">항목</th>
-									<th scope="col">점수</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>가격</td>
-									<td><input type="tel" placeholder="입력해주세요"></td>
-								</tr>
-								<tr>
-									<td>용량</td>
-									<td><input type="tel" placeholder="입력해주세요"></td>
-								</tr>
-								<tr>
-									<td>성분</td>
-									<td><input type="tel" placeholder="입력해주세요"></td>
-								</tr>
-								<tr>
-									<td>보습력</td>
-									<td><input type="tel" placeholder="입력해주세요"></td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<td>합계</td>
-									<td><input type="tel" value="40" readonly></td>
-								</tr>
-							</tfoot>
-						</table>
+						<div class="sv_check_item_wrap">
+							<label class="sv_check_item">
+								<input type="radio" name="radio" id="">
+								<div class="lbl">
+									<div>
+										<iframe width="854" height="480" src="https://www.youtube.com/embed/CEJvE5QzcjU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+										이 동영상이 좋아요
+									</div>
+								</div>
+							</label>
+							<label class="sv_check_item">
+								<input type="radio" name="radio" id="">
+								<div class="lbl">
+									<div>
+										전지현 CF가
+										<iframe width="854" height="480" src="https://www.youtube.com/embed/CEJvE5QzcjU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+										좋아요
+									</div>
+								</div>
+							</label>
+						</div>
 					</dd>
 				</dl>
 			</div>
@@ -79,5 +63,8 @@
 	<!-- JS -->
 	<script src="../common/js/jquery-1.9.1.min.js"></script>
 	<script src="../common/js/ui-front.js"></script>
+	<script>
+		svItemImgType(); //iframe 감싸기
+	</script>
 </body>
 </html>

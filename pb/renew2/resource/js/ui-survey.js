@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	scrollItem();
-	if($('.ui-roll-number').length > 0)rollingNumberInit();
+	//if($('.ui-roll-number').length > 0)rollingNumberInit();
 	if($('.ui-split-text').length > 0)splitText('.ui-split-text');
 
 	$(window).load(function(){

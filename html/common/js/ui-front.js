@@ -74,13 +74,16 @@ var svItemImgType = function(){
 			if($size > 0){
 				var $wrap = $(this).closest('.sv_check_item_wrap'),
 					$html = '<div class="sv_view_util"><a href="#" class="btn_view_util list on">리스트형</a><a href="#" class="btn_view_util gal">갤러리형</a></div>';
+				
+				if($items.find('.txt').length == 0)$items.find('.lbl > div').wrapInner('<div class="txt"></div>');
+				$img.insertBefore($img.parents('.txt'));
 				if(!$img.parent().hasClass('sv_img'))$img.wrap('<div class="sv_img"></div>');
 				if(!$wrap.hasClass('type3'))$wrap.addClass('type3');
 				if($wrap.prev('.sv_view_util').length == 0)$wrap.before($html);
-				$.get($img.attr('src')).fail(function(e){
+				/*$.get($img.attr('src')).fail(function(e){
 					console.log($img.attr('src')+' 경로에 없는 이미지!');
 					$img.css('opacity',0);
-				});
+				});*/
 			}
 
 			//미리보기 시 기타항목 입력영역 노출
@@ -126,8 +129,22 @@ var svItemImgType = function(){
 	var $iframes = $('.sv_survey iframe');
 	if($iframes.length > 0){
 		$iframes.each(function(){
-			if(!$(this).parent().hasClass('iframe_veideo'))$(this).wrap('<div class="iframe_veideo"></div>');
+			if(!$(this).parent().hasClass('iframe_veideo')){
+				if(!$(this).parent().hasClass('txt'))$(this).parent().wrapInner('<div class="txt"></div>');
+				if($(this).parents('.lbl').length > 0){
+					$(this).parents('.lbl').addClass('iframe');
+					$(this).insertBefore($(this).parents('.txt'));
+				}else{
+					$(this).insertAfter($(this).parents('.txt'));
+				}
+				$(this).wrap('<div class="iframe_veideo"></div>');
+			}
 		});
+	}
+
+	if($('.sv_survey').length > 1){
+		$('.sv_survey').addClass('line');
+		$('.sv_survey').first().removeClass('line');
 	}
 };
 

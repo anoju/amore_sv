@@ -1753,7 +1753,7 @@ input[type=date]::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
   font-size:0;
   line-height:13.333vw;
   padding-bottom: env(safe-area-inset-bottom);/* 아이폰 x 대응 수정 181115 */
-  padding-bottom: constant(safe-area-inset-bottom)/* 아이폰 x 구버전 대응 수정 181116 */
+  padding-bottom: constant(safe-area-inset-bottom);/* 아이폰 x 구버전 대응 수정 181116 */
 }/* 181108 버튼 크기 vh -> vw 수정 */
 .floating_btn .btn_set a,
 .floating_btn .btn_set button {
@@ -1766,14 +1766,14 @@ input[type=date]::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
   text-align:center;
   text-decoration:none;
   padding-bottom: env(safe-area-inset-bottom);/* 아이폰 x 대응 수정 181115 */
-  padding-bottom: constant(safe-area-inset-bottom)/* 아이폰 x 구버전 대응 수정 181116 */
+  padding-bottom: constant(safe-area-inset-bottom);/* 아이폰 x 구버전 대응 수정 181116 */
 }/* 181108 버튼 크기 vh -> vw 수정 */
 .floating_btn .btn_set button {
   box-sizing: content-box;/* 아이폰 x 대응 수정 181115 */
 }
 .product_list {
   padding-bottom: env(safe-area-inset-bottom);/* 아이폰 x 대응 수정 181116 */
-  padding-bottom: constant(safe-area-inset-bottom)/* 아이폰 x 구버전 대응 수정 181116 */
+  padding-bottom: constant(safe-area-inset-bottom);/* 아이폰 x 구버전 대응 수정 181116 */
 }
 .filter_popup .floating_btn .btn_set {
   padding-bottom: 0 !important;

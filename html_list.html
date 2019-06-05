@@ -23,6 +23,7 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 .table tbody tr:hover > *{background: #fff3a7 !important;}
 .table tr.del td{color:#999;text-decoration:line-through;}
 .table tr.del td a{color:inherit;}
+.red{color:#dd0000;}
 </style>
 </head>
 <body>
@@ -95,7 +96,7 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 				</tr>
 
 				<tr class="line">
-					<th scope="row" rowspan="30">설문</th>
+					<th scope="row" rowspan="31">설문</th>
 					<td class="tl" rowspan="2">랭킹</td>
 					<td class="tl"></td>
 					<td class="tl link">./html/front_html/ranking.html</td>
@@ -111,7 +112,7 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 					<td class="tl"></td>
 				</tr>
 				<tr>
-					<td class="tl" rowspan="15">설문유형</td>
+					<td class="tl" rowspan="16">설문유형</td>
 					<td class="tl">타입1(매트릭스)</td>
 					<td class="tl link">./html/front_html/question_1.html</td>
 					<td>2019-04-26</td>
@@ -126,11 +127,17 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 					<td class="tl"></td>
 				</tr>
 				<tr>
-					<td class="tl">타입3(동영상)</td>
+					<td class="tl" rowspan="2">타입3(동영상)</td>
 					<td class="tl link">./html/front_html/question_3.html</td>
 					<td>2019-04-26</td>
 					<td></td>
 					<td class="tl"></td>
+				</tr>
+				<tr>
+					<td class="tl link">./html/front_html/question_3_2.html</td>
+					<td>2019-06-04</td>
+					<td></td>
+					<td class="tl">선택 문항의 동영상<br><sub class="red">현재 솔루션에서 선택문항 등록 시 동영상 등록 안되게 막음</sub></td>
 				</tr>
 				<tr>
 					<td class="tl">타입4(다답형)</td>
@@ -156,7 +163,7 @@ h1{text-align: center;background: #f1f1f1;font-size:2em;line-height:2;color:#333
 					<td class="tl link">./html/front_html/question_5_3.html</td>
 					<td>2019-05-22</td>
 					<td></td>
-					<td class="tl">+선택제한<br><sub>checked 제한은 솔루션 기능에 있음</sub></td>
+					<td class="tl">+선택제한<br><sub class="red">checked 제한은 솔루션 기능에 있음</sub></td>
 				</tr>
 				<tr>
 					<td class="tl">타입6(단일형)</td>
